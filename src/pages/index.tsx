@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Banner from '@/components/banner'
 import Service_Box from '@/components/service-box'
