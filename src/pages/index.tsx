@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Banner from '@/components/banner'
 import Service_Box from '@/components/service-box'
+import Wellnes_Sec from '@/components/wellnes-sec'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,6 +34,7 @@ export default function Home() {
           />
         </div>
       </section>
+      <Wellnes_Sec />
     </main >
   )
 }
