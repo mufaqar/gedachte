@@ -29,7 +29,7 @@ function TeamBox({ data }: any) {
                     </span>
                 </p>
             </div>
-            <div className="h-full w-full bg-sky-900 bg-opacity-95 rounded-[20px] border border-black border-opacity-10 absolute p-8 opacity-0 group-hover:opacity-100">
+            <div className="h-full w-full bg-sky-900 bg-opacity-95 rounded-[20px] border border-black border-opacity-10 absolute p-8 opacity-0 group-hover:opacity-100 transition duration-700 ease-in-out">
                 <p className="text-white text-base font-normal leading-[27px]">
                     {data?.content}
                 </p>
