@@ -4,6 +4,8 @@ import Banner from '@/components/banner'
 import Service_Box from '@/components/service-box'
 import Wellnes_Sec from '@/components/wellnes-sec'
 import Team_sec from '@/components/team-sec'
+import Vision_Sec from '@/components/vision-sec'
+import Testimonials from '@/components/testimonials'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -37,6 +39,8 @@ export default function Home() {
       </section>
       <Wellnes_Sec />
       <Team_sec />
+      <Vision_Sec />
+      <Testimonials />
     </main >
   )
 }
