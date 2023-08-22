@@ -11,51 +11,51 @@ function Wellnes_Sec() {
                     <Image src="/images/wellness.png" alt='wellness.png' width={644} height={864} className='w-full' />
                 </div>
                 <div>
-                    <h2 className="text-sky-900 text-[32px] font-semibold leading-[52px] mb-10">
+                    <h2 className="text-sky-900 text-[32px] font-semibold leading-[40px] mb-10">
                         Ga op weg naar welzijn
                     </h2>
                     <ul className='grid gap-10'>
                         <li>
-                            <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[52px] flex items-center gap-8'>
+                            <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[40px] flex items-center gap-8'>
                                 <BsCheckCircle />
                                 <Link href="#">
                                     Ontdek Onze diensten
                                 </Link>
                             </h3>
-                            <p className="w-[577px] opacity-80 text-black text-lg font-normal leading-[30px] mt-6">
+                            <p className="opacity-80 text-black text-lg font-normal mt-6">
                                 Ontdek ons aanbod van op maat gemaakte diensten voor mentale gezondheid, speciaal ontworpen om aan jouw unieke behoeften en doelen te voldoen.
                             </p>
                         </li>
                         <li>
-                            <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[52px] flex items-center gap-8'>
+                            <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[40px] flex items-center gap-8'>
                                 <BsCheckCircle />
                                 <Link href="#">
                                     Boek een afspraak
                                 </Link>
                             </h3>
-                            <p className="w-[577px] opacity-80 text-black text-lg font-normal leading-[30px] mt-6">
+                            <p className="opacity-80 text-black text-lg font-normal mt-6">
                                 Gebruik ons online boekingssysteem om op jouw gemak een sessie in te plannen.
                             </p>
                         </li>
                         <li>
-                            <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[52px] flex items-center gap-8'>
+                            <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[40px] flex items-center gap-8'>
                                 <BsCheckCircle />
                                 <Link href="#">
                                     Speciale Events
                                 </Link>
                             </h3>
-                            <p className="w-[577px] opacity-80 text-black text-lg font-normal leading-[30px] mt-6">
+                            <p className="opacity-80 text-black text-lg font-normal mt-6">
                                 Ontmoet je toegewijde therapeut voor een gepersonaliseerde sessie gericht op jouw uitdagingen en persoonlijke groei.
                             </p>
                         </li>
                         <li>
-                            <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[52px] flex items-center gap-8'>
+                            <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[40px] flex items-center gap-8'>
                                 <BsCheckCircle />
                                 <Link href="#">
                                     Blijvende steun
                                 </Link>
                             </h3>
-                            <p className="w-[577px] opacity-80 text-black text-lg font-normal leading-[30px] mt-6">
+                            <p className="opacity-80 text-black text-lg font-normal mt-6">
                                 Profiteer van doorlopende begeleiding, informatieve bronnen en communicatie om je reis naar mentaal welzijn te voeden.
                             </p>
                         </li>
