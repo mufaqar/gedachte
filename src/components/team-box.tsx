@@ -6,7 +6,10 @@ function TeamBox({ data }: any) {
     return (
         <div className="grid gap-5 py-6 bg-white rounded-[20px] border border-black border-opacity-10 relative group">
             <div>
-                <Image src={data?.img} alt={data?.img} width={175} height={174} className='mx-auto mb-8' />
+                <div className='bg-red-300 rounded-full w-[175px] h-[174px] mx-auto mb-8 relative'>
+                    <Image src={data?.img} alt={data?.img} width={175} height={174} className='' />
+                    <Image src="/images/team/check.png" alt="check.png" width={38} height={37} className='absolute bottom-5 right-2' />
+                </div>
                 <h3 className="text-center text-blue-800 text-[22px] font-bold leading-[40px]">
                     {data?.name}
                 </h3>
