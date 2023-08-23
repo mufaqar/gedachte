@@ -8,13 +8,13 @@ function Wellnes_Sec() {
         <section className='py-20 bg-sky-100'>
             <div className='container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-5'>
                 <div>
-                    <Image src="/images/wellness.png" alt='wellness.png' width={644} height={864} className='w-full' />
+                    <Image src="/images/wellness.png" alt='wellness.png' width={644} height={864} className='w-full max-h-[850px] object-cover rounded-[20px]' />
                 </div>
-                <div>
-                    <h2 className="text-sky-900 text-[32px] font-semibold leading-[40px] mb-10">
+                <div className='grid'>
+                    <h2 className="text-sky-900 text-[32px] font-semibold leading-[40px]">
                         Ga op weg naar welzijn
                     </h2>
-                    <ul className='grid gap-10'>
+                    <ul className='grid gap-10 justify-between'>
                         <li>
                             <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[40px] flex items-center gap-8'>
                                 <BsCheckCircle />

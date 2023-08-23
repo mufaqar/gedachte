@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 function Comunity() {
@@ -15,9 +16,12 @@ function Comunity() {
                         <h2 className="text-sky-900 text-[32px] font-medium leading-[52px] mb-7">
                             Word Lid van Onze Bloeiende Community
                         </h2>
-                        <p className="opacity-80 text-black text-[22px] font-normal leading-[39px] tracking-wide">
+                        <p className="opacity-80 text-black text-[22px] font-normal leading-[39px] tracking-wide mb-10">
                             Sluit je aan bij onze bruisende gemeenschap van mensen die actief werken aan een betere mentale gezondheid. Met onze boeiende blogs, podcasts en video's bieden we je waardevolle inzichten en strategieën om je welzijn te verbeteren. Mis onze regelmatige updates en deskundige bijdragen aan de discussie over mentale gezondheid en zelfzorg niet.
                         </p>
+                        <Link href="#" className="text-center text-white text-[14.91px] font-semibold uppercase tracking-wide px-6 py-2.5 bg-sky-900 rounded-[36.46px]">
+                        Plan Nu een Afspraak
+                    </Link>
                     </div>
                 </div>
 

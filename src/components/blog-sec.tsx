@@ -21,7 +21,7 @@ function Blog_Sec() {
                 <div className='grid md:grid-cols-2 grid-cols-1 md:gap-20 gap-7 items-center'>
                     <div>
                         <div>
-                            <Image src="/images/blog/1.png" alt='blog/1.png' width={645} height={437} />
+                            <Image src="/images/blog/1.png" alt='blog/1.png' width={645} height={437} className='w-full' />
                         </div>
                         <div className='grid md:grid-cols-2 grid-cols-1 justify-between my-8'>
                             <div className='flex justify-between items-center'>
