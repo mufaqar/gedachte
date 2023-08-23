@@ -5,6 +5,9 @@ import Wellnes_Sec from '@/components/wellnes-sec'
 import Team_sec from '@/components/team-sec'
 import Vision_Sec from '@/components/vision-sec'
 import Testimonials from '@/components/testimonials'
+import Comunity from '@/components/comunity'
+import Blog_Sec from '@/components/blog-sec'
+import WorkTogather from '@/components/work-togather'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -40,6 +43,9 @@ export default function Home() {
       <Team_sec />
       <Vision_Sec />
       <Testimonials />
+      <Comunity />
+      <Blog_Sec />
+      <WorkTogather />
     </main >
   )
 }
