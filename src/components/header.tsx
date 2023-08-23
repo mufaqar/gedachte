@@ -20,29 +20,29 @@ function Header() {
                             open ? (<GrClose size={26} />) : (<FaBars size={26} />)
                         }
                     </button>
-                    <ul className={`flex md:flex-row flex-col justify-center md:gap-10 gap-2 md:static bg-transparent absolute ${open ? 'left-0 right-0 top-16 bg-white p-5' : 'top-[-200px]'}`}>
+                    <ul className={`flex md:flex-row flex-col justify-center md:gap-10 md:static bg-transparent absolute ${open ? 'left-0 right-0 top-20 gap-8 !bg-sky-900 rounded-tl-[20px] rounded-bl-[20px] px-6 py-8' : 'top-[-200px]'}`}>
                         <li>
-                            <Link href="/" className='text-lg font-semibold text-black'>
+                            <Link href="/" className={`text-lg font-semibold text-black ${open ? "text-white" : ""}`}>
                                 Home
                             </Link>
                         </li>
                         <li>
-                            <Link href="#" className='text-lg font-semibold text-black'>
+                            <Link href="#" className={`text-lg font-semibold text-black ${open ? "text-white" : ""}`}>
                                 Diensten
                             </Link>
                         </li>
                         <li>
-                            <Link href="#" className='text-lg font-semibold text-black'>
+                            <Link href="#" className={`text-lg font-semibold text-black ${open ? "text-white" : ""}`}>
                                 Hulpmiddelen
                             </Link>
                         </li>
                         <li>
-                            <Link href="#" className='text-lg font-semibold text-black'>
+                            <Link href="#" className={`text-lg font-semibold text-black ${open ? "text-white" : ""}`}>
                                 Over Ons
                             </Link>
                         </li>
                         <li>
-                            <Link href="#" className='text-lg font-semibold text-black'>
+                            <Link href="#" className={`text-lg font-semibold text-black ${open ? "text-white" : ""}`}>
                                 Contact
                             </Link>
                         </li>
