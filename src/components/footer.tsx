@@ -8,12 +8,12 @@ import { BiLogoFacebookCircle, BiLogoTwitter, BiLogoInstagram } from 'react-icon
 function Footer() {
   return (
     <footer className='md:bg-white bg-sky-100 md:mt-0 mt-20'>
-      <div className='py-16 container mx-auto px-4 flex md:flex-row flex-col justify-between gap-7 border-b border-indigo-950/10'>
+      <div className='py-16 container mx-auto px-4 flex md:flex-row flex-col justify-between gap-7 border-b md:border-indigo-950/10 border-transparent'>
         <div className='md:w-fit w-full'>
           <Link href="/">
-            <Image src="/images/logo.png" alt='logo' width={230} height={65} className='' />
+            <Image src="/images/logo.png" alt='logo' width={230} height={65} className='md:mx-0 mx-auto' />
           </Link>
-          <ul className='flex gap-4 mt-10'>
+          <ul className='flex gap-4 mt-10 md:justify-start justify-center'>
             <li className='h-10 w-10 bg-title_clr flex items-center justify-center rounded-full'>
               <Link href="#">
                 <BiLogoFacebookCircle className="text-2xl text-white" />
@@ -32,12 +32,12 @@ function Footer() {
           </ul>
         </div>
         <div className='md:w-fit w-full'>
-          <h6 className='text-sky-900 text-lg font-semibold leading-relaxed mb-5'>
+          <h6 className='text-sky-900 text-lg font-semibold md:text-left text-center leading-relaxed mb-5'>
             Reach us
           </h6>
-          <ul className='grid gap-4'>
+          <ul className='grid gap-4 md:justify-start justify-center'>
             <li>
-              <Link href="tel:+31622729374" className='text-sky-900 text-base font-normal flex gap-2 items-center'>
+              <Link href="tel:+31622729374" className='text-sky-900 text-base font-normal flex md:flex-row flex-col gap-2 items-center'>
                 <BiSolidPhoneCall className="w-6 h-6" />
                 <span>
                   +316 22729374
@@ -45,7 +45,7 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="mailto:GedachteGids@gmail.com" className='text-sky-900 text-base font-normal flex gap-2 items-center'>
+              <Link href="mailto:GedachteGids@gmail.com" className='text-sky-900 text-base font-normal flex md:flex-row flex-col gap-2 items-center'>
                 <BiSolidEnvelope className="w-6 h-6" />
                 <span>
                   GedachteGids@gmail.com
@@ -53,7 +53,7 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <span className='text-sky-900 text-base font-normal flex gap-2 items-center'>
+              <span className='text-sky-900 text-base font-normal flex md:flex-row flex-col gap-2 items-center'>
                 <HiMapPin className="w-6 h-6" />
                 <span>
                   Wiegelstraat 10A,
@@ -64,31 +64,31 @@ function Footer() {
           </ul>
         </div>
         <div className='md:w-fit w-full'>
-          <h6 className='text-sky-900 text-lg font-semibold leading-relaxed mb-5'>
+          <h6 className='text-sky-900 text-lg font-semibold md:text-left text-center leading-relaxed mb-5'>
             Menu
           </h6>
-          <ul className='grid gap-4'>
-            <li>
+          <ul className='grid gap-4 md:justify-start justify-center'>
+            <li className='md:text-left text-center'>
               <Link href="/" className='text-sky-900 text-base font-normal'>
                 Home
               </Link>
             </li>
-            <li>
+            <li className='md:text-left text-center'>
               <Link href="#" className='text-sky-900 text-base font-normal'>
                 Diensten
               </Link>
             </li>
-            <li>
+            <li className='md:text-left text-center'>
               <Link href="#" className='text-sky-900 text-base font-normal'>
                 Hulpmiddelen
               </Link>
             </li>
-            <li>
+            <li className='md:text-left text-center'>
               <Link href="#" className='text-sky-900 text-base font-normal'>
                 Over Ons
               </Link>
             </li>
-            <li>
+            <li className='md:text-left text-center'>
               <Link href="#" className='text-sky-900 text-base font-normal'>
                 Contact
               </Link>
@@ -97,7 +97,7 @@ function Footer() {
         </div>
         <div className='md:w-fit w-full'>
           <div className='bg-sky-100 rounded-[10px] py-4 px-5'>
-            <h6 className='text-sky-900 text-lg font-semibold leading-relaxed mb-8'>
+            <h6 className='text-sky-900 text-lg font-semibold md:text-left text-center leading-relaxed mb-8'>
               Ontvang Onze Nieuwsbrief
             </h6>
             <form action="#">
@@ -122,7 +122,7 @@ function Footer() {
           </div>
         </div>
       </div>
-      <div className='container mx-auto px-4 pt-14 pb-5'>
+      <div className='container mx-auto px-4 md:pt-14 pt-0 pb-5'>
         <p className='text-neutral-500 text-base font-normal leading-[34px] text-center'>
           Copyright Gedachte gids. All right reserved
         </p>
