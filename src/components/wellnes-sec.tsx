@@ -5,19 +5,19 @@ import { BsCheckCircle } from 'react-icons/bs'
 
 function Wellnes_Sec() {
     return (
-        <section className='py-20 bg-sky-100'>
+        <section className='md:py-20 py-10 bg-sky-100'>
             <div className='container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-5'>
-                <div>
+                <div className='md:order-1 order-2'>
                     <Image src="/images/wellness.png" alt='wellness.png' width={644} height={864} className='w-full max-h-[850px] object-cover rounded-[20px]' />
                 </div>
-                <div className='grid'>
+                <div className='grid md:gap-0 gap-12 md:order-2 order-1'>
                     <h2 className="text-sky-900 text-[32px] font-semibold leading-[40px]">
                         Ga op weg naar welzijn
                     </h2>
                     <ul className='grid gap-10 justify-between'>
                         <li>
                             <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[40px] flex items-center gap-8'>
-                                <BsCheckCircle />
+                                <BsCheckCircle className="w-9 h-9" />
                                 <Link href="#">
                                     Ontdek Onze diensten
                                 </Link>
@@ -28,7 +28,7 @@ function Wellnes_Sec() {
                         </li>
                         <li>
                             <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[40px] flex items-center gap-8'>
-                                <BsCheckCircle />
+                                <BsCheckCircle className="w-9 h-9" />
                                 <Link href="#">
                                     Boek een afspraak
                                 </Link>
@@ -39,7 +39,7 @@ function Wellnes_Sec() {
                         </li>
                         <li>
                             <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[40px] flex items-center gap-8'>
-                                <BsCheckCircle />
+                                <BsCheckCircle className="w-9 h-9" />
                                 <Link href="#">
                                     Speciale Events
                                 </Link>
@@ -50,7 +50,7 @@ function Wellnes_Sec() {
                         </li>
                         <li>
                             <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[40px] flex items-center gap-8'>
-                                <BsCheckCircle />
+                                <BsCheckCircle className="w-9 h-9" />
                                 <Link href="#">
                                     Blijvende steun
                                 </Link>

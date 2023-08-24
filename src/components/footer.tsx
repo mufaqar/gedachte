@@ -7,7 +7,7 @@ import { BiLogoFacebookCircle, BiLogoTwitter, BiLogoInstagram } from 'react-icon
 
 function Footer() {
   return (
-    <footer className='bg-white'>
+    <footer className='md:bg-white bg-sky-100 md:mt-0 mt-20'>
       <div className='py-16 container mx-auto px-4 flex md:flex-row flex-col justify-between gap-7 border-b border-indigo-950/10'>
         <div className='md:w-fit w-full'>
           <Link href="/">

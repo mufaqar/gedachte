@@ -1,15 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { AiOutlineShareAlt } from 'react-icons/ai'
 
 function PostBox() {
     return (
         <div>
-            <div>
+            <div className='featured_img'>
                 <Image src="/images/blog/1.png" alt='blog/1.png' width={645} height={437} />
             </div>
-            <div className='flex justify-between items-center my-8'>
+            <div className='post_meta flex justify-between items-center my-8'>
                 <div className='flex gap-3 items-center'>
                     <Image src="/images/blog/author.png" alt='blog/author.png' width={33} height={34} />
                     <span>
@@ -23,11 +22,11 @@ function PostBox() {
                     Juni 28, 2023
                 </Link>
             </div>
-            <div>
-                <Link href="#" className="w-[632px] text-sky-900 text-xl font-bold">
+            <div className='post_content'>
+                <Link href="#" className="post-title w-[632px] text-sky-900 text-xl font-bold">
                     Stress Begrijpen en Beheersen in het Dagelijks Leven
                 </Link>
-                <p className="text-neutral-500 text-[15px] font-normal leading-[30px]">
+                <p className="post_excrpt text-neutral-500 text-[15px] font-normal leading-[30px] mt-2.5">
                     Ontdek mindfulness als een krachtig instrument om je mentale welzijn te verbeteren. We leggen uit wat...
                 </p>
             </div>

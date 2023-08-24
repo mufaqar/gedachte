@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { BsFillStarFill } from 'react-icons/bs'
 
 function TeamBox({ data }: any) {
     return (
@@ -27,8 +28,8 @@ function TeamBox({ data }: any) {
                     <span className="text-sky-900 text-[13px] font-semibold leading-[30px]">
                         {data?.clints}
                     </span>
-                    <span className="text-sky-900 text-[15px] font-bold leading-[30px]">
-                        {data?.rating}
+                    <span className="text-sky-900 text-[15px] font-bold leading-[30px] flex items-center gap-1">
+                        {data?.rating} <BsFillStarFill />
                     </span>
                 </p>
             </div>

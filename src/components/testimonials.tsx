@@ -43,10 +43,10 @@ function Testimonials() {
         ]
     };
     return (
-        <section className='py-20'>
+        <section className='md:py-20 py-10 md:px-0 px-4'>
             <div className='container mx-auto px-4 bg-sky-100 rounded-[30px] py-36'>
                 <div className='md:mb-20 mb-10'>
-                    <h2 className="text-sky-900 text-[35px] font-medium leading-[52px] text-center">
+                    <h2 className="text-sky-900 md:text-[35px] text-[28px] font-medium leading-[52px] text-center">
                         Zet Vandaag de Eerste Stap: Ontdek, Boek, Genees
                     </h2>
                     <Image src="/images/arrow.png" alt='arrow.png' width={38} height={50} className='mx-auto' />
@@ -55,12 +55,12 @@ function Testimonials() {
                     </p>
                 </div>
                 <div>
-                    <Image src="/images/quotes.png" alt='qoutes.png' width={150} height={109} className='ml-[30%] -mb-12' />
+                    <Image src="/images/quotes.png" alt='qoutes.png' width={150} height={109} className='ml-[30%] -mb-12 md:block hidden' />
                     <div className='flex md:flex-row flex-col justify-between gap-7 items-center'>
                         <div className='md:w-[30%] w-full'>
-                            <div className='w-[297px] md:ml-auto'>
-                                <p className="text-sky-900 text-lg font-normal leading-[52px]">Testimonials</p>
-                                <h2 className="text-sky-900 text-[35px] font-semibold leading-[52px]">
+                            <div className='md:w-[297px] w-[276px] md:ml-auto'>
+                                <p className="text-sky-900 text-lg font-normal leading-[45px]">Testimonials</p>
+                                <h2 className="text-sky-900 md:text-[35px] text-[22px] font-semibold leading-[52px]">
                                     Wat Onze Patienten zeggen
                                 </h2>
                             </div>
@@ -70,7 +70,7 @@ function Testimonials() {
                                 {[0, 1, 2, 3].map((item: any, idx: number) => {
                                     return <div key={idx} className='px-3 rounded-[20px]'>
                                         <div className="p-[30px] !w-fit bg-white rounded-[20px] shadow-xl">
-                                            <p className="max-w-[397px] text-black text-lg font-medium leading-[29.99px] tracking-wide">
+                                            <p className="max-w-[397px] text-black md:text-lg text-[15.16px] font-medium leading-[29.99px] tracking-wide">
                                                 <span className="text-black text-3xl font-bold leading-[44.98px] tracking-wide">
                                                     “
                                                 </span>
@@ -81,76 +81,36 @@ function Testimonials() {
                                                     “
                                                 </span>
                                             </p>
-                                            <div className='w-full flex justify-between gap-5'>
+                                            <div className='w-full flex justify-between items-center gap-5'>
                                                 <div>
-                                                    <h4 className="text-black text-lg font-extrabold">
+                                                    <h4 className="text-black md:text-lg text-sm font-extrabold">
                                                         Sandra de Vries
                                                     </h4>
-                                                    <p className="text-neutral-600 text-xs font-normal">
+                                                    <p className="text-neutral-600 md:text-xs text-[10px] font-normal">
                                                         Regional Markets Executive
                                                     </p>
                                                 </div>
                                                 <ul className='flex gap-1'>
                                                     <li>
-                                                        <BsFillStarFill className="text-sky-900 h-8 w-8 p-1" />
+                                                        <BsFillStarFill className="text-sky-900 md:h-8 md:w-8 h-4 w-4 md:p-1 p-0" />
                                                     </li>
                                                     <li>
-                                                        <BsFillStarFill className="text-sky-900 h-8 w-8 p-1" />
+                                                        <BsFillStarFill className="text-sky-900 md:h-8 md:w-8 h-4 w-4 md:p-1 p-0" />
                                                     </li>
                                                     <li>
-                                                        <BsFillStarFill className="text-sky-900 h-8 w-8 p-1" />
+                                                        <BsFillStarFill className="text-sky-900 md:h-8 md:w-8 h-4 w-4 md:p-1 p-0" />
                                                     </li>
                                                     <li>
-                                                        <BsFillStarFill className="text-sky-900 h-8 w-8 p-1" />
+                                                        <BsFillStarFill className="text-sky-900 md:h-8 md:w-8 h-4 w-4 md:p-1 p-0" />
                                                     </li>
                                                     <li>
-                                                        <BsFillStarFill className="text-sky-900 h-8 w-8 p-1" />
+                                                        <BsFillStarFill className="text-sky-900 md:h-8 md:w-8 h-4 w-4 md:p-1 p-0" />
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 })}
-                                {/* <div className="p-[30px] bg-white rounded-[20px] drop-shadow-2xl flex-col justify-center items-center gap-[30px] inline-flex">
-                                    <p className="w-[397px] text-black text-lg font-medium leading-[29.99px] tracking-wide">
-                                        <span className="text-black text-3xl font-bold leading-[44.98px] tracking-wide">
-                                            “
-                                        </span>
-                                        <br />
-                                        Gedachte Gids heeft mijn leven veranderd. Dankzij hun deskundige begeleiding voel ik me nu veel gelukkiger en zelfverzekerder. Een absolute aanrader!
-                                        <br />
-                                        <span className="text-black text-3xl font-bold leading-[46.65px] tracking-wide text-right block">
-                                            “
-                                        </span>
-                                    </p>
-                                    <div className='w-full flex justify-between gap-5'>
-                                        <div>
-                                            <h4 className="text-black text-lg font-extrabold">
-                                                Sandra de Vries
-                                            </h4>
-                                            <p className="text-neutral-600 text-xs font-normal">
-                                                Regional Markets Executive
-                                            </p>
-                                        </div>
-                                        <ul className='flex gap-1'>
-                                            <li>
-                                                <BsFillStarFill className="text-sky-900 h-8 w-8 p-1" />
-                                            </li>
-                                            <li>
-                                                <BsFillStarFill className="text-sky-900 h-8 w-8 p-1" />
-                                            </li>
-                                            <li>
-                                                <BsFillStarFill className="text-sky-900 h-8 w-8 p-1" />
-                                            </li>
-                                            <li>
-                                                <BsFillStarFill className="text-sky-900 h-8 w-8 p-1" />
-                                            </li>
-                                            <li>
-                                                <BsFillStarFill className="text-sky-900 h-8 w-8 p-1" />
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div> */}
                             </Slider>
                         </div>
                     </div>

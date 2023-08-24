@@ -6,24 +6,24 @@ import Image from 'next/image'
 
 function Blog_Sec() {
     return (
-        <section className='py-20'>
+        <section className='md:py-20 py-10'>
             <div className='container mx-auto px-4'>
                 <div className='mb-12'>
                     <h2 className="py-[30px] border-b border-violet-950/40 max-w-[480px]">
-                        <span className="text-sky-900 text-[32px] font-semibold leading-[52px]">
+                        <span className="text-sky-900 md:text-[32px] text-3xl font-semibold leading-[52px]">
                             Leer Meer Van Onze
                         </span><br />
-                        <span className="text-sky-900 text-[32px] font-bold leading-[52px]">
+                        <span className="text-sky-900 md:text-[32px] text-3xl font-bold leading-[52px]">
                             Specialisten
                         </span>
                     </h2>
                 </div>
                 <div className='grid md:grid-cols-2 grid-cols-1 md:gap-20 gap-7 items-center'>
                     <div>
-                        <div>
+                        <div className='featured_img'>
                             <Image src="/images/blog/1.png" alt='blog/1.png' width={645} height={437} className='w-full' />
                         </div>
-                        <div className='grid md:grid-cols-2 grid-cols-1 justify-between my-8'>
+                        <div className='post_meta grid md:grid-cols-2 grid-cols-1 justify-between my-8'>
                             <div className='flex justify-between items-center'>
                                 <div className='flex gap-3 items-center'>
                                     <Image src="/images/blog/author.png" alt='blog/author.png' width={33} height={34} />
@@ -44,11 +44,11 @@ function Blog_Sec() {
                                 </Link>
                             </div>
                         </div>
-                        <div>
-                            <Link href="#" className="w-[632px] text-sky-900 text-xl font-bold">
+                        <div className='post_content'>
+                            <Link href="#" className="post_title w-[632px] text-sky-900 text-xl font-bold">
                                 Stress Begrijpen en Beheersen in het Dagelijks Leven
                             </Link>
-                            <p className="opacity-80 text-black text-base font-normal leading-[33.92px] tracking-tight">
+                            <p className="post_excrpt opacity-80 text-black text-base font-normal leading-[33.92px] tracking-tight mt-2.5">
                                 Duik in het concept van stress, ontdek de meest voorkomende triggers en leer praktische strategieën om dagelijkse stress te beheersen. Wij bieden je concrete tips om stressverlagende technieken moeiteloos in je dagelijkse routine te integreren.
                             </p>
                         </div>
@@ -58,7 +58,7 @@ function Blog_Sec() {
                             <PostBox />
                             <PostBox />
                         </div>
-                        <div className="mt-5 bg-white rounded-[20px] border border-black border-opacity-10 flex md:flex-row flex-col-reverse">
+                        <div className="mt-5 bg-white rounded-[20px] border border-black border-opacity-10  md:flex-row flex-col-reverse md:flex hidden">
                             <div className='w-full py-5 px-10 flex flex-col gap-3 justify-center items-center'>
                                 <p className="text-sky-900 text-[22px] font-bold capitalize leading-[35px]">
                                     Zie meer blogs

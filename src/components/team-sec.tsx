@@ -4,10 +4,10 @@ import { TeamData } from '@/const/team-data'
 
 function Team_sec() {
     return (
-        <section className='py-20'>
+        <section className='md:py-20 py-10'>
             <div className='container mx-auto px-4'>
                 <div className='mb-14'>
-                    <h2 className="text-sky-900 text-[35px] font-medium leading-[52px]">
+                    <h2 className="text-sky-900 text-[35px] md:text-left text-center font-medium leading-[52px]">
                         Specialisten die u kunnen helpen
                     </h2>
                 </div>

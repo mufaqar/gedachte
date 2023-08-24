@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main className={``}>
       <Banner />
-      <section className='py-20'>
+      <section className='md:py-20 py-10'>
         <div className='container mx-auto px-4 grid md:grid-cols-4 grid-cols-1 gap-5'>
           <Service_Box
             img="/images/service/1.png"

@@ -8,7 +8,7 @@ function Service_Box({ title, link, img }: any) {
         <div className='rounded-2xl relative'>
             <Image src={img} alt='service/1.png' width={313} height={381} className='object-cover w-full' />
             <div className='absolute inset-0 p-6'>
-                <Link href={link} className='text-xl font-bold text-white flex items-center gap-5 justify-between'>
+                <Link href={link} className='text-[22px] font-bold text-white flex items-center gap-5 justify-between'>
                     <span>
                         {title}<br />Therapie
                     </span>
