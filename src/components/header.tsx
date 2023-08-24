@@ -29,7 +29,7 @@ function Header() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className={`text-lg font-semibold text-black ${open ? "text-white" : ""}`}>
+                                <Link href="/services" className={`text-lg font-semibold text-black ${open ? "text-white" : ""}`}>
                                     Diensten
                                 </Link>
                             </li>
