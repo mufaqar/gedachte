@@ -24,7 +24,7 @@ export default function About_Us() {
               </div>
             </div>
             <div className='relative'>
-              <Image src="/images/story-mbl.png" alt='story-mbl.png' width={324} height={233} className='md:hidden block' />
+              <Image src="/images/story-mbl.png" alt='story-mbl.png' width={324} height={233} className='md:hidden block w-full' />
               <Image src="/images/story.png" alt='story.png' width={556} height={396} className='md:block hidden ml-auto' />
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function About_Us() {
               </div>
             </div>
             <div className='relative md:order-1 order-2'>
-              <Image src="/images/values-mbl.png" alt='values-mbl.png' width={324} height={233} className='md:hidden block' />
+              <Image src="/images/values-mbl.png" alt='values-mbl.png' width={324} height={233} className='md:hidden block w-full' />
               <Image src="/images/values.png" alt='values.png' width={556} height={396} className='md:block hidden' />
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function About_Us() {
               </div>
             </div>
             <div className='relative'>
-              <Image src="/images/barriers-mbl.png" alt='barriers-mbl.png' width={324} height={233} className='md:hidden block' />
+              <Image src="/images/barriers-mbl.png" alt='barriers-mbl.png' width={324} height={233} className='md:hidden block w-full' />
               <Image src="/images/barriers.png" alt='barriers.png' width={556} height={396} className='md:block hidden ml-auto' />
             </div>
           </div>
