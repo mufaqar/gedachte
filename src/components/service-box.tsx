@@ -4,7 +4,7 @@ import React from 'react'
 
 function ServiceBox({ data }: any) {
   return (
-    <div className={`flex flex-col gap-8 items-center ${data?.custom_class}`}>
+    <div className={`flex flex-col gap-8 items-center ${data.id === 2 ? "md:flex-row-reverse" : "md:flex-row"}`}>
       <div className='md:w-1/2 w-full'>
         <div className="md:p-[32.27px] px-2 py-[32.27px] max-w-[490px] mx-auto bg-white rounded-2xl flex-col justify-center items-start gap-[42.41px] flex w-full">
           <div className="flex-col justify-start md:items-start items-center gap-[25.81px] flex w-full">
