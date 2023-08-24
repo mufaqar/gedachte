@@ -71,4 +71,33 @@ export const TeamData = [
         rating: "4.6",
         content: "Carlette is een professionele therapeut met meer dan 15 jaar ervaring in het veld. Ze heeft een brede kennis van verschillende therapeutische technieken en benaderingen, variërend van cognitieve gedragstherapie tot mindfulness. Door de jaren heen heeft ze met een divers cliëntenbestand gewerkt, waaronder individuen die kampen met angst, depressie, en relatieproblemen.",
     },
+    {
+        img: "/images/team/9.png",
+        name: "Tom Wiegsma",
+        role: "Founder",
+    },
+    {
+        img: "/images/team/10.png",
+        name: "Tom Wiegsma",
+        role: "Founder",
+        fb: "#",
+        mail: "#",
+        twiter: "#"
+    },
+    {
+        img: "/images/team/11.png",
+        name: "Tom Wiegsma",
+        role: "Founder",
+        fb: "#",
+        mail: "#",
+        twiter: "#"
+    },
+    {
+        img: "/images/team/12.png",
+        name: "Tom Wiegsma",
+        role: "Founder",
+        fb: "#",
+        mail: "#",
+        twiter: "#"
+    },
 ]

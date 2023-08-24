@@ -6,7 +6,7 @@ function Comunity() {
     return (
         <section className='md:py-20 py-10 relative'>
             <Image src="/images/comunity-bg.png" alt='comunity-bg.png' width={503} height={506} className='absolute inset-0 z-[-2] object-cover h-full md:block hidden' />
-            <div className='container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 gap-5 justify-between'>
+            <div className='container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 gap-5 items-center justify-between'>
                 <div className='relative'>
                     <Image src="/images/comunity-mbl.png" alt='comunity-mbl.png' width={324} height={233} className='md:hidden block' />
                     <Image src="/images/comunity.png" alt='comunity.png' width={539} height={357} className='md:block hidden' />
