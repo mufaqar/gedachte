@@ -1,5 +1,5 @@
 import React from 'react'
-import PostBox from './post-box'
+import Featured_Post from './featured-post'
 import Link from 'next/link'
 import { AiOutlineShareAlt } from 'react-icons/ai'
 import Image from 'next/image'
@@ -55,8 +55,8 @@ function Blog_Sec() {
                     </div>
                     <div>
                         <div className='flex md:flex-row flex-col gap-10'>
-                            <PostBox />
-                            <PostBox />
+                            <Featured_Post />
+                            <Featured_Post />
                         </div>
                         <div className="mt-5 bg-white rounded-[20px] border border-black border-opacity-10  md:flex-row flex-col-reverse md:flex hidden">
                             <div className='w-full py-5 px-10 flex flex-col gap-3 justify-center items-center'>

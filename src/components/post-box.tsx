@@ -1,34 +1,42 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { AiOutlineShareAlt } from 'react-icons/ai'
 
-function PostBox() {
+function PostBox({ data }: any) {
     return (
-        <div>
-            <div className='featured_img'>
-                <Image src="/images/blog/1.png" alt='blog/1.png' width={645} height={437} />
-            </div>
-            <div className='post_meta flex justify-between items-center my-8'>
-                <div className='flex gap-3 items-center'>
-                    <Image src="/images/blog/author.png" alt='blog/author.png' width={33} height={34} />
-                    <span>
-                        <Link href="#" className="text-neutral-900 text-sm font-normal leading-loose">
-                            Joanna Wellick
-                        </Link>
-                    </span>
-                </div>
-                <span className='h-[1px] w-8 bg-black/10'></span>
-                <Link href="#" className="text-gray-500 text-sm font-normal leading-loose">
-                    Juni 28, 2023
+        <div className="bg-white rounded-[30px] shadow pb-10">
+            <Link href="#" className=''>
+                <Image src={data?.img} alt={data?.img} width={645} height={437} className='w-full' />
+            </Link>
+            <div className='md:px-[30px] px-6 mt-8 mb-6'>
+                <Link href="#" className="text-neutral-900 md:text-[25px] text-lg font-semibold md:leading-[45px] leading-[33.67px]">
+                    {data?.title}
                 </Link>
-            </div>
-            <div className='post_content'>
-                <Link href="#" className="post-title w-[632px] text-sky-900 text-xl font-bold">
-                    Stress Begrijpen en Beheersen in het Dagelijks Leven
-                </Link>
-                <p className="post_excrpt text-neutral-500 text-[15px] font-normal leading-[30px] mt-2.5">
-                    Ontdek mindfulness als een krachtig instrument om je mentale welzijn te verbeteren. We leggen uit wat...
+                <p className="text-gray-500 text-base font-normal leading-normal">
+                    {data?.content}
                 </p>
+            </div>
+            <div className='post_meta flex flex-wrap gap-2 justify-between md:px-[30px] px-6'>
+                <div className='author_box flex justify-between items-center'>
+                    <div className='flex gap-3 items-center'>
+                        <Image src="/images/blog/author.png" alt='blog/author.png' width={33} height={34} />
+                        <span>
+                            <Link href="#" className="text-neutral-900 text-sm font-normal leading-loose">
+                                Joanna Wellick
+                            </Link>
+                        </span>
+                    </div>
+                    <span className='h-[1px] w-8 bg-black/10'></span>
+                    <Link href="#" className="text-gray-500 text-sm font-normal leading-loose">
+                        Juni 28, 2023
+                    </Link>
+                </div>
+                <div className=''>
+                    <Link href="#" className="text-gray-500 text-sm font-normal leading-loose flex items-center">
+                        <AiOutlineShareAlt />  1K shares
+                    </Link>
+                </div>
             </div>
         </div>
     )
