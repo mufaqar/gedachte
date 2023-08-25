@@ -2,7 +2,8 @@ import EventBox from '@/components/event-box'
 import React from 'react'
 import { Events_Data } from '@/const/events-data'
 import PostBox from '@/components/post-box'
-import {Posts_Data} from '@/const/posts-data'
+import { Posts_Data } from '@/const/posts-data'
+import Link from 'next/link'
 
 function Blogs() {
     return (
@@ -39,6 +40,11 @@ function Blogs() {
                     {Posts_Data.map((item: any, idx: number) => {
                         return <PostBox key={idx} data={item} />
                     })}
+                </div>
+                <div className='container mx-auto px-4 pt-20 text-center'>
+                    <Link href="#" className="text-center text-white text-[14.91px] font-semibold uppercase tracking-wide px-16 py-4 bg-sky-900 rounded-[36.46px]">
+                        Lees Meer
+                    </Link>
                 </div>
             </section>
         </main>
