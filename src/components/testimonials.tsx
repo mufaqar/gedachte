@@ -1,3 +1,5 @@
+import { fadeUp } from '@/const/anim';
+import { motion } from 'framer-motion';
 import Image from 'next/image'
 import React from 'react'
 import { BsFillStarFill } from 'react-icons/bs'
@@ -43,9 +45,16 @@ function Testimonials() {
         ]
     };
     return (
-        <section className='md:py-20 py-10 md:px-0 px-4'>
+        <motion.section
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ staggerChildren: 0.1 }}
+            className='md:py-20 py-10 md:px-0 px-4'>
             <div className='container mx-auto px-4 bg-sky-100 rounded-[30px] py-36'>
-                <div className='md:mb-20 mb-10'>
+                <motion.div
+                    variants={fadeUp}
+                    className='md:mb-20 mb-10'>
                     <h2 className="text-sky-900 md:text-[35px] text-[28px] font-medium leading-[52px] text-center">
                         Zet Vandaag de Eerste Stap: Ontdek, Boek, Genees
                     </h2>
@@ -53,7 +62,7 @@ function Testimonials() {
                     <p className="max-w-[761px] mx-auto text-center text-sky-900 text-xl font-normal leading-[38px]">
                         Begin jouw reis naar mentaal welzijn door onze diensten te verkennen, een afspraak te maken en je te begeven op een pad van persoonlijke groei en heling. Wij staan klaar om je bij elke stap te begeleiden.
                     </p>
-                </div>
+                </motion.div>
                 <div>
                     <Image src="/images/quotes.png" alt='qoutes.png' width={150} height={109} className='ml-[30%] -mb-12 md:block hidden' />
                     <div className='flex md:flex-row flex-col justify-between gap-7 items-center'>
@@ -68,7 +77,9 @@ function Testimonials() {
                         <div className='md:w-[70%] w-full'>
                             <Slider {...settings}>
                                 {[0, 1, 2, 3].map((item: any, idx: number) => {
-                                    return <div key={idx} className='px-3 rounded-[20px]'>
+                                    return <motion.div
+                                        variants={fadeUp}
+                                        key={idx} className='px-3 rounded-[20px]'>
                                         <div className="p-[30px] !w-fit bg-white rounded-[20px] shadow-xl">
                                             <p className="max-w-[397px] text-black md:text-lg text-[15.16px] font-medium leading-[29.99px] tracking-wide">
                                                 <span className="text-black text-3xl font-bold leading-[44.98px] tracking-wide">
@@ -109,14 +120,14 @@ function Testimonials() {
                                                 </ul>
                                             </div>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 })}
                             </Slider>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 

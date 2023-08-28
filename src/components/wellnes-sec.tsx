@@ -1,3 +1,5 @@
+import { fadeUp, zoomIn } from '@/const/anim'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -5,12 +7,21 @@ import { BsCheckCircle } from 'react-icons/bs'
 
 function Wellnes_Sec() {
     return (
-        <section className='md:py-20 py-10 bg-sky-100'>
+        <motion.section
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ staggerChildren: 0.1 }}
+            className='md:py-20 py-10 bg-sky-100'>
             <div className='container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-5'>
-                <div className='md:order-1 order-2'>
+                <motion.div
+                    variants={zoomIn}
+                    className='md:order-1 order-2'>
                     <Image src="/images/wellness.png" alt='wellness.png' width={644} height={864} className='w-full max-h-[850px] object-cover rounded-[20px]' />
-                </div>
-                <div className='grid md:gap-0 gap-12 md:order-2 order-1'>
+                </motion.div>
+                <motion.div
+                    variants={fadeUp}
+                    className='grid md:gap-0 gap-12 md:order-2 order-1'>
                     <h2 className="text-sky-900 text-[32px] font-semibold leading-[40px]">
                         Ga op weg naar welzijn
                     </h2>
@@ -60,9 +71,9 @@ function Wellnes_Sec() {
                             </p>
                         </li>
                     </ul>
-                </div>
+                </motion.div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 
