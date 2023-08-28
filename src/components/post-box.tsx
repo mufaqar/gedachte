@@ -6,11 +6,11 @@ import { AiOutlineShareAlt } from 'react-icons/ai'
 function PostBox({ data }: any) {
     return (
         <div className="bg-white rounded-[30px] shadow pb-10">
-            <Link href="#" className=''>
+            <Link href="/blogs/single" className=''>
                 <Image src={data?.img} alt={data?.img} width={645} height={437} className='w-full' />
             </Link>
             <div className='md:px-[30px] px-6 mt-8 mb-6'>
-                <Link href="#" className="text-neutral-900 md:text-[25px] text-lg font-semibold md:leading-[45px] leading-[33.67px]">
+                <Link href="/blogs/single" className="text-neutral-900 md:text-[25px] text-lg font-semibold md:leading-[45px] leading-[33.67px]">
                     {data?.title}
                 </Link>
                 <p className="text-gray-500 text-base font-normal leading-normal">
