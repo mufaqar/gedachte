@@ -5,6 +5,8 @@ import { CgLoadbarSound } from 'react-icons/cg'
 import { LuClock9 } from 'react-icons/lu'
 import { BsFacebook, BsTwitter, BsPinterest } from 'react-icons/bs'
 import Comments_Sec from '@/components/comment-sec'
+import { Posts_Data } from '@/const/posts-data'
+import PostBox from '@/components/post-box'
 
 function Single_Blog() {
     return (
@@ -30,7 +32,7 @@ function Single_Blog() {
                             <CgLoadbarSound className="w-4 h-4" /> 1.6K views
                         </span>
                         <span className='h-[1px] w-5 bg-neutral-200'></span>
-                        <ul className='flex flex-wrap gap-2.5 text-neutral-200'>
+                        <ul className='flex flex-wrap gap-2.5 text-neutral-200 items-center'>
                             <li>
                                 <BsFacebook className="w-4 h-4" />
                             </li>
@@ -51,7 +53,7 @@ function Single_Blog() {
             <section className='py-20'>
                 <div className='container mx-auto px-4 flex md:flex-row flex-col gap-7'>
                     <div className='md:w-2/3 w-full'>
-                        <p className="max-w-[711px] text-black text-lg font-normal leading-[39px] tracking-wide">
+                        <p className="max-w-[711px] text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                             Stress is een onvermijdelijk onderdeel van ons leven, vaak veroorzaakt door de eisen van werk, relaties en diverse verantwoordelijkheden. Hoewel een bepaald niveau van stress motiverend kan zijn, kan chronische stress een zware wissel trekken op onze mentale en fysieke gezondheid. Begrijpen wat stress is en effectieve strategieën leren om het te beheersen, kan ons in staat stellen gezonder en evenwichtiger te leven.
                         </p>
                     </div>
@@ -63,19 +65,19 @@ function Single_Blog() {
                     <h2 className="text-sky-900 text-[28px] font-semibold leading-[45px]">
                         Wat is Stress?
                     </h2>
-                    <p className="text-black text-lg font-normal leading-[39px] tracking-wide">
+                    <p className="text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                         Stress is de natuurlijke reactie van het lichaam op elke vraag of bedreiging. Wanneer we worden geconfronteerd met een uitdaging, of het nu een strakke deadline op het werk is of een persoonlijk probleem, geeft ons lichaam stresshormonen af zoals cortisol en adrenaline. Deze hormonen bereiden ons voor om snel te reageren, algemeen bekend als de 'vecht-of-vlucht'-reactie. In korte uitbarstingen kan deze reactie gunstig zijn, maar langdurige blootstelling aan stressoren kan leiden tot chronische stress en de bijbehorende gezondheidseffecten.
                     </p>
                     <h2 className="text-sky-900 text-[28px] font-semibold leading-[45px]">
                         Stressoren Identificeren
                     </h2>
-                    <p className="text-black text-lg font-normal leading-[39px] tracking-wide">
+                    <p className="text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                         De eerste stap in het beheersen van stress is het identificeren van de bronnen, ook wel stressoren genoemd. Stressoren kunnen sterk variëren van persoon tot persoon en kunnen werkgerelateerde druk, financiële zorgen, relatieproblemen, gezondheidsproblemen en meer omvatten. Door de specifieke stressoren die ons beïnvloeden te lokaliseren, kunnen we werken aan het aanpakken of minimaliseren van hun impact op ons leven.
                     </p>
                     <h2 className="text-sky-900 text-[28px] font-semibold leading-[45px]">
                         De Impact van Chronische Stress
                     </h2>
-                    <p className="text-black text-lg font-normal leading-[39px] tracking-wide">
+                    <p className="text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                         Chronische stress, indien niet beheerd, kan ernstige gevolgen hebben voor zowel onze fysieke als mentale gezondheid. Het is gekoppeld aan een reeks problemen zoals een verhoogd risico op hartziekten, verzwakte immuunfunctie, slaapstoornissen, angst en depressie. Het herkennen van de tekenen van chronische stress, zoals aanhoudende vermoeidheid, prikkelbaarheid en veranderingen in eetlust, is cruciaal voor het nemen van proactieve stappen in de richting van het beheer ervan."
                     </p>
                 </div>
@@ -93,13 +95,13 @@ function Single_Blog() {
                             <h3 className="text-sky-900 text-2xl font-semibold leading-[45px]">
                                 1 -Beoefen Ontspanningstechnieken:
                             </h3>
-                            <p className="max-w-[578px] text-black text-lg font-normal leading-[39px] tracking-wide">
+                            <p className="max-w-[578px] text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                                 Doe aan ontspanningstechnieken zoals diepe ademhaling, meditatie en progressieve spierontspanning. Deze methoden activeren de ontspanningsreactie van het lichaam, wat de stressreactie tegengaat.
                             </p>
                             <h3 className="text-sky-900 text-2xl font-semibold leading-[45px]">
                                 2 - Regelmatige Lichamelijke Activiteit:
                             </h3>
-                            <p className="max-w-[578px] text-black text-lg font-normal leading-[39px] tracking-wide">
+                            <p className="max-w-[578px] text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                                 Beweging zorgt voor de afgifte van endorfines, de natuurlijke stemmingverbeteraars van het lichaam. Regelmatige lichamelijke activiteit kan stress verminderen en het algehele welzijn verbeteren.
                             </p>
                         </div>
@@ -112,13 +114,13 @@ function Single_Blog() {
                             <h3 className="text-sky-900 text-2xl font-semibold leading-[45px]">
                                 3 - Gezonde Levensstijlkeuzes:
                             </h3>
-                            <p className="max-w-[578px] text-black text-lg font-normal leading-[39px] tracking-wide">
+                            <p className="max-w-[578px] text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                                 Houd een evenwichtig dieet aan, prioriteer slaap en beperk de consumptie van stimulerende middelen zoals cafeïne en nicotine. Een gezonde levensstijl ondersteunt de veerkracht van het lichaam tegen stress.
                             </p>
                             <h3 className="text-sky-900 text-2xl font-semibold leading-[45px]">
                                 4 - Tijdmanagement:
                             </h3>
-                            <p className="max-w-[578px] text-black text-lg font-normal leading-[39px] tracking-wide">
+                            <p className="max-w-[578px] text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                                 Organiseer taken en prioriteer verantwoordelijkheden. Effectief tijdmanagement kan voorkomen dat je je overweldigd voelt en een gevoel van controle creëren.
                             </p>
                         </div>
@@ -131,19 +133,19 @@ function Single_Blog() {
                             <h3 className="text-sky-900 text-2xl font-semibold leading-[45px]">
                                 5 - Zoek Sociale Ondersteuning:
                             </h3>
-                            <p className="max-w-[578px] text-black text-lg font-normal leading-[39px] tracking-wide">
+                            <p className="max-w-[578px] text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                                 Maak verbinding met vrienden, familie of steungroepen. Het delen van je gevoelens en zorgen met anderen kan de emotionele last verlichten. 6 - Stel Grenzen:
                             </p>
                             <h3 className="text-sky-900 text-2xl font-semibold leading-[45px]">
                                 6 - Stel Grenzen:
                             </h3>
-                            <p className="max-w-[578px] text-black text-lg font-normal leading-[39px] tracking-wide">
+                            <p className="max-w-[578px] text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                                 Leer nee te zeggen wanneer nodig en stel grenzen die je tijd en energie beschermen.
                             </p>
                             <h3 className="text-sky-900 text-2xl font-semibold leading-[45px]">
                                 7 - Mindfulness en Mind-Body Praktijken:
                             </h3>
-                            <p className="max-w-[578px] text-black text-lg font-normal leading-[39px] tracking-wide">
+                            <p className="max-w-[578px] text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                                 Doe aan mindfulnessmeditatie, yoga of tai chi. Deze praktijken bevorderen het bewustzijn van het huidige moment en kunnen stress op termijn verminderen.
                             </p>
                         </div>
@@ -155,24 +157,41 @@ function Single_Blog() {
                     <h2 className="text-sky-900 text-[28px] font-semibold leading-[45px]">
                         Stressoren Identificeren
                     </h2>
-                    <p className="text-black text-lg font-normal leading-[39px] tracking-wide">
+                    <p className="text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                         De eerste stap in het beheersen van stress is het identificeren van de bronnen, ook wel stressoren genoemd. Stressoren kunnen sterk variëren van persoon tot persoon en kunnen werkgerelateerde druk, financiële zorgen, relatieproblemen, gezondheidsproblemen en meer omvatten. Door de specifieke stressoren die ons beïnvloeden te lokaliseren, kunnen we werken aan het aanpakken of minimaliseren van hun impact op ons leven.
                     </p>
                     <h2 className="text-sky-900 text-[28px] font-semibold leading-[45px]">
                         De Impact van Chronische Stress
                     </h2>
-                    <p className="text-black text-lg font-normal leading-[39px] tracking-wide">
+                    <p className="text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                         Chronische stress, indien niet beheerd, kan ernstige gevolgen hebben voor zowel onze fysieke als mentale gezondheid. Het is gekoppeld aan een reeks problemen zoals een verhoogd risico op hartziekten, verzwakte immuunfunctie, slaapstoornissen, angst en depressie. Het herkennen van de tekenen van chronische stress, zoals aanhoudende vermoeidheid, prikkelbaarheid en veranderingen in eetlust, is cruciaal voor het nemen van proactieve stappen in de richting van het beheer ervan."
                     </p>
                     <h2 className="text-sky-900 text-[28px] font-semibold leading-[45px]">
                         Stressoren Identificeren
                     </h2>
-                    <p className="text-black text-lg font-normal leading-[39px] tracking-wide">
+                    <p className="text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                         De eerste stap in het beheersen van stress is het identificeren van de bronnen, ook wel stressoren genoemd. Stressoren kunnen sterk variëren van persoon tot persoon en kunnen werkgerelateerde druk, financiële zorgen, relatieproblemen, gezondheidsproblemen en meer omvatten. Door de specifieke stressoren die ons beïnvloeden te lokaliseren, kunnen we werken aan het aanpakken of minimaliseren van hun impact op ons leven.
                     </p>
                 </div>
             </section>
-            {/* <Comments_Sec /> */}
+            <Comments_Sec />
+            <section className='py-20'>
+                <div className='container mx-auto px-4'>
+                    <h2 className="text-sky-900 text-[32px] md:text-left text-center font-semibold leading-[45px] mb-2">
+                        Vergelijkbare Artikelen
+                    </h2>
+                </div>
+                <div className='container mx-auto px-4 grid md:grid-cols-3 grid-cols-1 gap-7 mt-20'>
+                    {Posts_Data.slice(0, 3).map((item: any, idx: number) => {
+                        return <PostBox key={idx} data={item} />
+                    })}
+                </div>
+                <div className='container mx-auto px-4 pt-20 text-center'>
+                    <Link href="#" className="text-center text-white text-[14.91px] font-semibold uppercase tracking-wide px-16 py-4 bg-sky-900 rounded-[36.46px]">
+                        Lees Meer
+                    </Link>
+                </div>
+            </section>
         </main>
     )
 }

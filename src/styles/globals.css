@@ -1,8 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
+
+/* width */
+.comment_box ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.comment_box ::-webkit-scrollbar-track {
+  display: none;
+
+}
+
+/* Handle */
+.comment_box ::-webkit-scrollbar-thumb {
+  background: #D9D9D9;
+  border-radius: 10px;
+  height: 450px;
+}
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -15,5 +33,10 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .comment_box ::-webkit-scrollbar {
+   display: none;
   }
 }
