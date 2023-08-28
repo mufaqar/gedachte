@@ -66,7 +66,7 @@ function Header() {
                 <div className='md:w-1/4 w-full py-4 md:px-0 px-4'>
                     <ul className='flex md:justify-end justify-center gap-10 items-center'>
                         <li>
-                            <Link href="#" className={`md:text-sm text-xs font-semibold uppercase  md:py-4 py-2.5 px-6 rounded-[36px] block ${router.pathname !== "/" ? "md:bg-white bg-sky-900 md:text-title_clr text-white" : "bg-title_clr text-white"}`}>
+                            <Link href="/contact-us#contact_form" className={`md:text-sm text-xs font-semibold uppercase  md:py-4 py-2.5 px-6 rounded-[36px] block ${router.pathname !== "/" ? "md:bg-white bg-sky-900 md:text-title_clr text-white" : "bg-title_clr text-white"}`}>
                                 Plan Nu een Afspraak
                             </Link>
                         </li>
