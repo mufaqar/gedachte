@@ -14,7 +14,7 @@ function WorkTogather() {
                         Neem contact met ons op om samen te werken aan jouw hersteltraject.Plan Nu een Afspraak
                     </h2>
                     <div className=' md:text-left text-center'>
-                        <Link href="#" className="text-center text-sky-900 text-[14.91px] font-semibold uppercase tracking-wide px-6 py-2.5 bg-white rounded-[36.46px]">
+                        <Link href="/contact-us#contact_form" className="text-center text-sky-900 text-[14.91px] font-semibold uppercase tracking-wide px-6 py-2.5 bg-white rounded-[36.46px]">
                             Plan Nu een Afspraak
                         </Link>
                     </div>

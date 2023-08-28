@@ -45,7 +45,7 @@ export default function Services() {
                                     Je kunt om veel redenen kiezen voor familiebegeleiding, zoals conflicten tussen ouders en kinderen, slechte communicatie of financiële problemen.
                                 </p>
                                 <div className="md:text-left text-center my-3">
-                                    <Link href="#" className="text-center text-white text-base font-semibold uppercase tracking-wide md:px-12 px-8 py-4 bg-sky-900 rounded-[33.61px]">
+                                    <Link href="/contact-us#contact_form"className="text-center text-white text-base font-semibold uppercase tracking-wide md:px-12 px-8 py-4 bg-sky-900 rounded-[33.61px]">
                                         BoEk online
                                     </Link>
                                 </div>
@@ -61,7 +61,7 @@ export default function Services() {
                                     Speltherapie kan kinderen helpen hun gevoelens of ervaringen op een natuurlijke manier te uiten terwijl ze hun emoties en reacties op gebeurtenissen verwerken. Bij Gedachte Gids Counseling Group bieden we speltherapiediensten aan om gezinnen te helpen de emotionele, gedragsmatige, sociale of leeruitdagingen van hun kind te begrijpen.Boek Online
                                 </p>
                                 <div className="md:text-left text-center my-3">
-                                    <Link href="#" className="text-center text-white text-base font-semibold uppercase tracking-wide md:px-12 px-8 py-4 bg-sky-900 rounded-[33.61px]">
+                                    <Link href="/contact-us#contact_form" className="text-center text-white text-base font-semibold uppercase tracking-wide md:px-12 px-8 py-4 bg-sky-900 rounded-[33.61px]">
                                         BoEk online
                                     </Link>
                                 </div>
@@ -108,7 +108,7 @@ export default function Services() {
                                     Wij geloven dat de reis van elk individu naar mentaal welzijn uniek is. Onze geestelijke gezondheidsprofessionals hanteren een gepersonaliseerde benadering van genezing, zodat je de zorg en ondersteuning ontvangt die aansluit bij jouw specifieke omstandigheden en doelen.
                                 </p>
                                 <div className="md:text-left text-center my-3">
-                                    <Link href="#" className="text-center text-white text-base font-semibold uppercase tracking-wide md:px-12 px-8 py-4 bg-sky-900 rounded-[33.61px]">
+                                    <Link href="/contact-us#contact_form" className="text-center text-white text-base font-semibold uppercase tracking-wide md:px-12 px-8 py-4 bg-sky-900 rounded-[33.61px]">
                                         BoEk online
                                     </Link>
                                 </div>

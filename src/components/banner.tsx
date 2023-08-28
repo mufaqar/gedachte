@@ -13,7 +13,7 @@ function Banner() {
                         Navigeer Je Weg naar een Gelukkiger Jij: Wij Zijn Je Persoonlijke Gids voor Mentale Gezondheid en Algeheel Welzijn
                     </p>
                     <div>
-                        <Link href="#" className='text-sm font-semibold uppercase bg-white text-sky-900 py-4 px-6 rounded-[36px] w-fit block mx-auto'>
+                        <Link href="/contact-us#contact_form" className='text-sm font-semibold uppercase bg-white text-sky-900 py-4 px-6 rounded-[36px] w-fit block mx-auto'>
                             Plan Nu een Afspraak
                         </Link>
                     </div>

@@ -15,7 +15,7 @@ function ServiceBox({ data }: any) {
               {data?.excrpt}
             </p>
             <div className="md:text-left text-center my-3">
-              <Link href="#" className="text-center text-white text-base font-semibold uppercase tracking-wide md:px-12 px-8 py-4 bg-sky-900 rounded-[33.61px]">
+              <Link href="/contact-us#contact_form" className="text-center text-white text-base font-semibold uppercase tracking-wide md:px-12 px-8 py-4 bg-sky-900 rounded-[33.61px]">
                 BoEk online
               </Link>
             </div>

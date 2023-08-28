@@ -19,7 +19,7 @@ function Comunity() {
                         <p className="opacity-80 text-black md:text-[22px] text-base font-normal leading-[39px] tracking-wide mb-10">
                             Sluit je aan bij onze bruisende gemeenschap van mensen die actief werken aan een betere mentale gezondheid. Met onze boeiende blogs, podcasts en video's bieden we je waardevolle inzichten en strategieën om je welzijn te verbeteren. Mis onze regelmatige updates en deskundige bijdragen aan de discussie over mentale gezondheid en zelfzorg niet.
                         </p>
-                        <Link href="#" className="text-center text-white text-[14.91px] font-semibold uppercase tracking-wide px-6 py-2.5 bg-sky-900 rounded-[36.46px]">
+                        <Link href="/contact-us#contact_form" className="text-center text-white text-[14.91px] font-semibold uppercase tracking-wide px-6 py-2.5 bg-sky-900 rounded-[36.46px]">
                             Plan Nu een Afspraak
                         </Link>
                     </div>

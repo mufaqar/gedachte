@@ -63,7 +63,7 @@ function Blog_Sec() {
                                 <p className="text-sky-900 text-[22px] font-bold capitalize leading-[35px]">
                                     Zie meer blogs
                                 </p>
-                                <Link href="#" className="text-center text-white text-[10.08px] font-semibold uppercase tracking-tight px-6 py-2.5 bg-sky-900 rounded-3xl">
+                                <Link href="/blogs" className="text-center text-white text-[10.08px] font-semibold uppercase tracking-tight px-6 py-2.5 bg-sky-900 rounded-3xl">
                                     Ga naar blogs
                                 </Link>
                             </div>

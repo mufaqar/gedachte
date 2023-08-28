@@ -19,7 +19,7 @@ function Contact_Us() {
                     </div>
                 </div>
             </section>
-            <section className='py-20'>
+            <section className='py-20' id="contact_form">
                 <div className='container mx-auto px-4'>
                     <div className="md:bg-white bg-sky-100 rounded-[11.14px] drop-shadow-[0_0px_30px_rgba(0,0,0,0.1)] flex md:flex-row flex-col gap-7 md:p-2 py-14">
                         <div className='bg-sky-100 md:w-1/3 w-full rounded-tr-[11.14px] rounded-tl-[11.14px] rounded-bl-[11.14px] md:p-10 px-4 flex flex-col justify-between gap-7 relative'>

@@ -6,7 +6,7 @@ function EventBox({data} : any) {
     return (
         <div className="p-[30px] shadow rounded-xl flex flex-col gap-[22px]">
             <div className=''>
-                <Image src={data?.img} alt={data?.img} width={330} height={425} className='w-full' />
+                <Image src={data?.img} alt={data?.img} width={330} height={425} className='w-full scale-100 hover:scale-110' />
             </div>
             <div>
                 <p className="text-black text-xs font-normal leading-[14.57px] mb-5">
