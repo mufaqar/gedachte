@@ -74,22 +74,22 @@ function Footer() {
               </Link>
             </li>
             <li className='md:text-left text-center'>
-              <Link href="#" className='text-sky-900 text-base font-normal'>
+              <Link href="/services" className='text-sky-900 text-base font-normal'>
                 Diensten
               </Link>
             </li>
             <li className='md:text-left text-center'>
-              <Link href="#" className='text-sky-900 text-base font-normal'>
+              <Link href="/blogs" className='text-sky-900 text-base font-normal'>
                 Hulpmiddelen
               </Link>
             </li>
             <li className='md:text-left text-center'>
-              <Link href="#" className='text-sky-900 text-base font-normal'>
+              <Link href="/about-us" className='text-sky-900 text-base font-normal'>
                 Over Ons
               </Link>
             </li>
             <li className='md:text-left text-center'>
-              <Link href="#" className='text-sky-900 text-base font-normal'>
+              <Link href="/contact-us" className='text-sky-900 text-base font-normal'>
                 Contact
               </Link>
             </li>
