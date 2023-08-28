@@ -11,7 +11,7 @@ import PostBox from '@/components/post-box'
 function Single_Blog() {
     return (
         <main>
-            <section className="bg-sky-900/60 py-20 bg-[url('/images/blog/6.png')] bg-center bg-no-repeat bg-cover bg-blend-multiply">
+            <section className="bg-sky-900/60 md:py-20 py-10 bg-[url('/images/blog/6.png')] bg-center bg-no-repeat bg-cover bg-blend-multiply">
                 <div className='container mx-auto px-8'>
                     <h1 className="text-white text-[39px] md:text-left text-center font-semibold leading-[45px] mb-4">
                         Stress Begrijpen en Beheersen in het Dagelijks Leven
@@ -50,7 +50,7 @@ function Single_Blog() {
                     </div>
                 </div>
             </section>
-            <section className='py-20'>
+            <section className='md:py-20 py-10'>
                 <div className='container mx-auto px-4 flex md:flex-row flex-col gap-7'>
                     <div className='md:w-2/3 w-full'>
                         <p className="max-w-[711px] text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
@@ -82,7 +82,7 @@ function Single_Blog() {
                     </p>
                 </div>
             </section>
-            <section className='py-20'>
+            <section className='md:py-20 py-10'>
                 <div className='container mx-auto px-4 grid gap-8'>
                     <div className='flex md:flex-row flex-col md:gap-12 gap-7'>
                         <div className='md:w-1/3 w-full'>
@@ -152,7 +152,7 @@ function Single_Blog() {
                     </div>
                 </div>
             </section>
-            <section className='py-20'>
+            <section className='md:py-20 py-10'>
                 <div className='container mx-auto px-4 grid gap-8'>
                     <h2 className="text-sky-900 text-[28px] font-semibold leading-[45px]">
                         Stressoren Identificeren
@@ -175,13 +175,13 @@ function Single_Blog() {
                 </div>
             </section>
             <Comments_Sec />
-            <section className='py-20'>
+            <section className='md:py-20 py-10'>
                 <div className='container mx-auto px-4'>
                     <h2 className="text-sky-900 text-[32px] md:text-left text-center font-semibold leading-[45px] mb-2">
                         Vergelijkbare Artikelen
                     </h2>
                 </div>
-                <div className='container mx-auto px-4 grid md:grid-cols-3 grid-cols-1 gap-7 mt-20'>
+                <div className='container mx-auto px-4 grid md:grid-cols-3 grid-cols-1 gap-7 md:mt-20 mt-10'>
                     {Posts_Data.slice(0, 3).map((item: any, idx: number) => {
                         return <PostBox key={idx} data={item} />
                     })}

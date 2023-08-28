@@ -31,7 +31,7 @@ export default function Comments_Sec() {
                         </li>
                     </ul>
                 </div>
-                <div className="comment_box relative rounded-[20px] md:border border-black/30 grid md:grid-cols-2 grid-cols-1 gap-7 md:py-12 py-7 md:px-14 px-0">
+                <div className="comment_box relative rounded-[20px] md:border border-black/30 grid md:grid-cols-2 grid-cols-1 gap-7 md:py-12 py-0 md:px-14 px-0">
                     <span className="text-sky-900 text-base font-medium leading-10 flex flex-wrap gap-2 items-center md:hidden">
                         <BiComment />  36 Comments
                     </span>
@@ -67,7 +67,7 @@ export default function Comments_Sec() {
                             <form className="flex-col justify-start items-start gap-[29px] flex mt-6">
                                 <div className="w-full relative">
                                     <label htmlFor='name' className="text-black text-xs font-medium leading-tight">Naam</label>
-                                    <input className="w-full p-3 text-neutral-400 placeholder:text-neutral-400 text-sm font-medium leading-tight border-b border-neutral-400 focus:outline-0 mt-2"
+                                    <input className="w-full py-3 text-neutral-400 placeholder:text-neutral-400 text-sm font-medium leading-tight border-b border-neutral-400 focus:outline-0 mt-2"
                                         placeholder='John Doe'
                                         type="text"
                                         id="name"
@@ -75,7 +75,7 @@ export default function Comments_Sec() {
                                 </div>
                                 <div className="w-full relative">
                                     <label htmlFor='email' className="text-black text-xs font-medium leading-tight">Email</label>
-                                    <input className="w-full p-3 text-neutral-400 placeholder:text-neutral-400 text-sm font-medium leading-tight border-b border-neutral-400 focus:outline-0 mt-2"
+                                    <input className="w-full py-3 text-neutral-400 placeholder:text-neutral-400 text-sm font-medium leading-tight border-b border-neutral-400 focus:outline-0 mt-2"
                                         placeholder='Johndoe@gmail.com'
                                         type="email"
                                         id="email"
@@ -83,7 +83,7 @@ export default function Comments_Sec() {
                                 </div>
                                 <div className="w-full relative">
                                     <label htmlFor='comment' className="text-black text-xs font-medium leading-tight">Comment</label>
-                                    <input className="w-full p-3 text-neutral-400 placeholder:text-neutral-400 text-sm font-medium leading-tight border-b border-neutral-400 focus:outline-0 mt-2"
+                                    <input className="w-full py-3 text-neutral-400 placeholder:text-neutral-400 text-sm font-medium leading-tight border-b border-neutral-400 focus:outline-0 mt-2"
                                         placeholder='Schrijf jouw comment hier...'
                                         type="text"
                                         id="comment"

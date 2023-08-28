@@ -56,7 +56,7 @@ function Header() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className={`text-lg font-semibold  ${router.pathname !== "/" ? "" : ""}`}>
+                                <Link href="/contact-us" className={`text-lg font-semibold  ${router.pathname !== "/" ? "" : ""}`}>
                                     Contact
                                 </Link>
                             </li>
