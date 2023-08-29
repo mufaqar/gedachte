@@ -1,6 +1,6 @@
 export default {
      name: "teams",
-     title: "Specialist",
+     title: "Staff",
      type: "document",
      fields: [
        {
@@ -13,20 +13,26 @@ export default {
          name: "featureImage",
          type: "image"
        },
-       {
-         title: "Type",
-         name: "type",
-         type: "string"
-       },
+     
        {
          title: "Designation",
          name: "designation",
          type: "string"
        },
        {
-         title: "Clients",
-         name: "clients",
-         type: "string"
-       }
+         title: "Facebook",
+         name: "facebook",
+         type: "url"
+       },
+       {
+        title: "Twiter",
+        name: "twiter",
+        type: "url"
+      },
+      {
+        title: "Google",
+        name: "google",
+        type: "url"
+      }
      ]
    }
