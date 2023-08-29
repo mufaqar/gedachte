@@ -3,10 +3,17 @@ import { BiComment } from 'react-icons/bi'
 import { FaShare } from 'react-icons/fa'
 import { BsFacebook, BsTwitter, BsPinterest } from 'react-icons/bs'
 import ComentBox from './coment-box'
+import { motion } from 'framer-motion'
+import { fadeUp } from '@/const/anim'
 
 export default function Comments_Sec() {
     return (
-        <section className='md:py-20 py-10'>
+        <motion.section
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ staggerChildren: 0.1 }}
+            className='md:py-20 py-10'>
             <div className='container mx-auto px-4'>
                 <div className='md:flex hidden flex-wrap justify-between items-center mb-5'>
                     <div>
@@ -40,7 +47,7 @@ export default function Comments_Sec() {
                             return <ComentBox key={idx} />
                         })}
                     </div>
-                    <div>
+                    <motion.div variants={fadeUp}>
                         <ul className='md:hidden flex flex-wrap gap-5 items-center justify-end my-10'>
                             <li>
                                 <span className="text-sky-900 text-base font-medium leading-10 flex flex-wrap gap-2 items-center">
@@ -94,9 +101,9 @@ export default function Comments_Sec() {
                                 </button>
                             </form>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }

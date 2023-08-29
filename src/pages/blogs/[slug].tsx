@@ -7,51 +7,81 @@ import { BsFacebook, BsTwitter, BsPinterest } from 'react-icons/bs'
 import Comments_Sec from '@/components/comment-sec'
 import { Posts_Data } from '@/const/posts-data'
 import PostBox from '@/components/post-box'
+import { motion } from 'framer-motion'
+import { fadeUp } from '@/const/anim'
 
 function Single_Blog() {
     return (
         <main>
-            <section className="bg-sky-900/60 md:py-20 py-10 bg-[url('/images/blog/6.png')] bg-center bg-no-repeat bg-cover bg-blend-multiply">
+            <motion.section
+                initial={"offscreen"}
+                whileInView={"onscreen"}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ staggerChildren: 0.1 }}
+                className="bg-sky-900/60 md:py-20 py-10 bg-[url('/images/blog/6.png')] bg-center bg-no-repeat bg-cover bg-blend-multiply">
                 <div className='container mx-auto px-8'>
-                    <h1 className="text-white text-[39px] md:text-left text-center font-semibold leading-[45px] mb-4">
+                    <motion.h1
+                        variants={fadeUp}
+                        className="text-white text-[39px] md:text-left text-center font-semibold leading-[45px] mb-4">
                         Stress Begrijpen en Beheersen in het Dagelijks Leven
-                    </h1>
-                    <p className="md:w-[520px] w-[300px] md:mx-0 mx-auto text-white md:text-lg text-base md:text-left text-center font-normal leading-[26.94px] mb-12">
+                    </motion.h1>
+                    <motion.p
+                        variants={fadeUp}
+                        className="md:w-[520px] w-[300px] md:mx-0 mx-auto text-white md:text-lg text-base md:text-left text-center font-normal leading-[26.94px] mb-12">
                         Verken het concept van stress, de meest voorkomende triggers en praktische strategieën om dagelijkse stress te beheersen.
-                    </p>
+                    </motion.p>
                     <div className='post_meta flex flex-wrap gap-2.5 md:justify-start justify-center items-center'>
-                        <span className="text-neutral-200 md:text-xl sm font-normal leading-10">
+                        <motion.span
+                            variants={fadeUp}
+                            className="text-neutral-200 md:text-xl sm font-normal leading-10">
                             by Joanna Wellick
-                        </span>
-                        <span className='h-[1px] w-5 bg-neutral-200'></span>
-                        <span className="text-neutral-200 md:text-base text-xs font-normal tracking-tight flex gap-1 items-center">
+                        </motion.span>
+                        <motion.span
+                            variants={fadeUp}
+                            className='h-[1px] w-5 bg-neutral-200'></motion.span>
+                        <motion.span
+                            variants={fadeUp}
+                            className="text-neutral-200 md:text-base text-xs font-normal tracking-tight flex gap-1 items-center">
                             <LuClock9 className="w-4 h-4" /> 2 minute read
-                        </span>
-                        <span className='h-[1px] w-5 bg-neutral-200'></span>
-                        <span className="text-neutral-200 md:text-base text-xs font-normal tracking-tight flex gap-1 items-center">
+                        </motion.span>
+                        <motion.span
+                            variants={fadeUp}
+                            className='h-[1px] w-5 bg-neutral-200'></motion.span>
+                        <motion.span
+                            variants={fadeUp}
+                            className="text-neutral-200 md:text-base text-xs font-normal tracking-tight flex gap-1 items-center">
                             <CgLoadbarSound className="w-4 h-4" /> 1.6K views
-                        </span>
-                        <span className='h-[1px] w-5 bg-neutral-200'></span>
+                        </motion.span>
+                        <motion.span
+                            variants={fadeUp}
+                            className='h-[1px] w-5 bg-neutral-200'></motion.span>
                         <ul className='flex flex-wrap gap-2.5 text-neutral-200 items-center'>
-                            <li>
+                            <motion.li variants={fadeUp}>
                                 <BsFacebook className="w-4 h-4" />
-                            </li>
-                            <li>
+                            </motion.li>
+                            <motion.li variants={fadeUp}>
                                 <BsTwitter className="w-4 h-4" />
-                            </li>
-                            <li>
+                            </motion.li>
+                            <motion.li variants={fadeUp}>
                                 <BsPinterest className="w-4 h-4" />
-                            </li>
-                            <li className="text-neutral-200 md:text-base text-xs font-normal tracking-tight">
+                            </motion.li>
+                            <motion.li variants={fadeUp} className="text-neutral-200 md:text-base text-xs font-normal tracking-tight">
                                 1.2K shares
-                            </li>
+                            </motion.li>
                         </ul>
 
                     </div>
                 </div>
-            </section>
-            <section className='md:py-20 py-10'>
-                <div className='container mx-auto px-4 flex md:flex-row flex-col gap-7'>
+            </motion.section>
+            <motion.section
+                initial={"offscreen"}
+                whileInView={"onscreen"}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ staggerChildren: 0.1 }}
+                className='md:py-20 py-10'>
+                <motion.div
+                    variants={fadeUp}
+                    className='container mx-auto px-4 flex md:flex-row flex-col gap-7'>
                     <div className='md:w-2/3 w-full'>
                         <p className="max-w-[711px] text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                             Stress is een onvermijdelijk onderdeel van ons leven, vaak veroorzaakt door de eisen van werk, relaties en diverse verantwoordelijkheden. Hoewel een bepaald niveau van stress motiverend kan zijn, kan chronische stress een zware wissel trekken op onze mentale en fysieke gezondheid. Begrijpen wat stress is en effectieve strategieën leren om het te beheersen, kan ons in staat stellen gezonder en evenwichtiger te leven.
@@ -60,8 +90,10 @@ function Single_Blog() {
                     <div className='md:w-1/3 w-full'>
                         <Image src="/images/blog/post1.png" alt='images/blog/post1.png' width={478} height={268} />
                     </div>
-                </div>
-                <div className='container mx-auto px-4 my-8 grid gap-8'>
+                </motion.div>
+                <motion.div
+                    variants={fadeUp}
+                    className='container mx-auto px-4 my-8 grid gap-8'>
                     <h2 className="text-sky-900 text-[28px] font-semibold leading-[45px]">
                         Wat is Stress?
                     </h2>
@@ -80,11 +112,18 @@ function Single_Blog() {
                     <p className="text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                         Chronische stress, indien niet beheerd, kan ernstige gevolgen hebben voor zowel onze fysieke als mentale gezondheid. Het is gekoppeld aan een reeks problemen zoals een verhoogd risico op hartziekten, verzwakte immuunfunctie, slaapstoornissen, angst en depressie. Het herkennen van de tekenen van chronische stress, zoals aanhoudende vermoeidheid, prikkelbaarheid en veranderingen in eetlust, is cruciaal voor het nemen van proactieve stappen in de richting van het beheer ervan."
                     </p>
-                </div>
-            </section>
-            <section className='md:py-20 py-10'>
+                </motion.div>
+            </motion.section>
+            <motion.section
+                initial={"offscreen"}
+                whileInView={"onscreen"}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ staggerChildren: 0.1 }}
+                className='md:py-20 py-10'>
                 <div className='container mx-auto px-4 grid gap-8'>
-                    <div className='flex md:flex-row flex-col md:gap-12 gap-7'>
+                    <motion.div
+                        variants={fadeUp}
+                        className='flex md:flex-row flex-col md:gap-12 gap-7'>
                         <div className='md:w-1/3 w-full'>
                             <Image src="/images/blog/post2.png" alt='images/blog/post2.png' width={445} height={448} />
                         </div>
@@ -105,8 +144,10 @@ function Single_Blog() {
                                 Beweging zorgt voor de afgifte van endorfines, de natuurlijke stemmingverbeteraars van het lichaam. Regelmatige lichamelijke activiteit kan stress verminderen en het algehele welzijn verbeteren.
                             </p>
                         </div>
-                    </div>
-                    <div className='flex md:flex-row flex-col md:gap-12 gap-7'>
+                    </motion.div>
+                    <motion.div
+                        variants={fadeUp}
+                        className='flex md:flex-row flex-col md:gap-12 gap-7'>
                         <div className='md:w-1/3 w-full'>
                             <Image src="/images/blog/post3.png" alt='images/blog/post3.png' width={445} height={448} />
                         </div>
@@ -124,8 +165,10 @@ function Single_Blog() {
                                 Organiseer taken en prioriteer verantwoordelijkheden. Effectief tijdmanagement kan voorkomen dat je je overweldigd voelt en een gevoel van controle creëren.
                             </p>
                         </div>
-                    </div>
-                    <div className='flex md:flex-row flex-col md:gap-12 gap-7'>
+                    </motion.div>
+                    <motion.div
+                        variants={fadeUp}
+                        className='flex md:flex-row flex-col md:gap-12 gap-7'>
                         <div className='md:w-1/3 w-full'>
                             <Image src="/images/blog/post4.png" alt='images/blog/post4.png' width={445} height={448} />
                         </div>
@@ -149,11 +192,18 @@ function Single_Blog() {
                                 Doe aan mindfulnessmeditatie, yoga of tai chi. Deze praktijken bevorderen het bewustzijn van het huidige moment en kunnen stress op termijn verminderen.
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
-            </section>
-            <section className='md:py-20 py-10'>
-                <div className='container mx-auto px-4 grid gap-8'>
+            </motion.section>
+            <motion.section
+                initial={"offscreen"}
+                whileInView={"onscreen"}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ staggerChildren: 0.1 }}
+                className='md:py-20 py-10'>
+                <motion.div
+                    variants={fadeUp}
+                    className='container mx-auto px-4 grid gap-8'>
                     <h2 className="text-sky-900 text-[28px] font-semibold leading-[45px]">
                         Stressoren Identificeren
                     </h2>
@@ -172,8 +222,8 @@ function Single_Blog() {
                     <p className="text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
                         De eerste stap in het beheersen van stress is het identificeren van de bronnen, ook wel stressoren genoemd. Stressoren kunnen sterk variëren van persoon tot persoon en kunnen werkgerelateerde druk, financiële zorgen, relatieproblemen, gezondheidsproblemen en meer omvatten. Door de specifieke stressoren die ons beïnvloeden te lokaliseren, kunnen we werken aan het aanpakken of minimaliseren van hun impact op ons leven.
                     </p>
-                </div>
-            </section>
+                </motion.div>
+            </motion.section>
             <Comments_Sec />
             <section className='md:py-20 py-10'>
                 <div className='container mx-auto px-4'>

@@ -4,22 +4,31 @@ import { Events_Data } from '@/const/events-data'
 import PostBox from '@/components/post-box'
 import { Posts_Data } from '@/const/posts-data'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { fadeUp } from '@/const/anim'
 
 function Blogs() {
     return (
         <main>
-            <section className='py-20'>
+            <motion.section
+                initial={"offscreen"}
+                whileInView={"onscreen"}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ staggerChildren: 0.1 }}
+                className='py-20'>
                 <div className='container mx-auto px-4'>
                     <div>
-                        <p className="text-center text-sky-900 text-2xl font-medium">
+                        <motion.p
+                            variants={fadeUp} className="text-center text-sky-900 text-2xl font-medium">
                             Gedachte blog
-                        </p>
-                        <h1 className="text-center text-sky-900 text-[35px] font-semibold">
+                        </motion.p>
+                        <motion.h1
+                            variants={fadeUp} className="text-center text-sky-900 text-[35px] font-semibold">
                             Workshops & Events
-                        </h1>
+                        </motion.h1>
                     </div>
                 </div>
-            </section>
+            </motion.section>
             <section className='py-20'>
                 <div className='container mx-auto px-4 grid md:grid-cols-3 grid-cols-1 gap-7'>
                     {Events_Data.map((item: any, idx: number) => {

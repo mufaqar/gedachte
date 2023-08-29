@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { Faqs_Data } from '@/const/faq-data'
+import { motion } from "framer-motion";
+import { fadeUp } from "@/const/anim";
 
 export default function Faqs() {
     const [open, setOpen] = useState(1);
@@ -9,14 +11,14 @@ export default function Faqs() {
             return setOpen(id)
         }
         setOpen(id)
-        //setDropdown(!dropdown)
-
     }
 
     return (
-        <div className="max-w-[813px] mx-auto divide-y ">
+        <motion.div className="max-w-[813px] mx-auto divide-y ">
             {Faqs_Data.map((item: any, idx: number) => {
-                return <div key={idx} className="w-full h-fit py-[30px]">
+                return <motion.div key={idx}
+                    variants={fadeUp}
+                    className="w-full h-fit py-[30px]">
                     <div className="">
                         <div className="flex md:flex-row flex-row-reverse justify-between cursor-pointer" onClick={() => handleFaq(item.id)}>
                             <p className="text-sky-900 md:text-[22px] text-lg font-medium leading-7 w-full" >
@@ -34,9 +36,9 @@ export default function Faqs() {
                             {item.ans}
                         </p>
                     </div>
-                </div>
+                </motion.div>
 
             })}
-        </div>
+        </motion.div>
     );
 }

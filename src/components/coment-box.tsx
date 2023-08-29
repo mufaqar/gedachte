@@ -1,22 +1,32 @@
+import { fadeUp } from '@/const/anim'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
 
 function ComentBox() {
     return (
-        <div className="p-5 bg-sky-100/50 rounded-[10px]">
-            <div className="justify-start items-center gap-3.5 inline-flex">
-                <Image className="w-[28.76px] h-[28.76px] rounded-full" src="/images/blog/author.png" alt='blog/author.png' width={33} height={34} />
-                <p className="text-slate-700 text-sm font-medium">
-                    amyrobson
+        <motion.div
+            initial={"offscreen"}
+            whileInView={"onscreen"}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ staggerChildren: 0.1 }}>
+            <motion.div
+                variants={fadeUp}
+                className="p-5 bg-sky-100/50 rounded-[10px]">
+                <div className="justify-start items-center gap-3.5 inline-flex">
+                    <Image className="w-[28.76px] h-[28.76px] rounded-full" src="/images/blog/author.png" alt='blog/author.png' width={33} height={34} />
+                    <p className="text-slate-700 text-sm font-medium">
+                        amyrobson
+                    </p>
+                    <span className="text-gray-500 text-sm font-normal leading-snug">
+                        1 maand geleden
+                    </span>
+                </div>
+                <p className="text-gray-500 text-sm font-medium leading-snug">
+                    Uitstekend werk wat betreft de lay-out en het kleurenschema! Het is visueel aantrekkelijk. Slechts een klein probleem met het navigatiemenu, maar dat is geen dealbreaker.
                 </p>
-                <span className="text-gray-500 text-sm font-normal leading-snug">
-                    1 maand geleden
-                </span>
-            </div>
-            <p className="text-gray-500 text-sm font-medium leading-snug">
-                Uitstekend werk wat betreft de lay-out en het kleurenschema! Het is visueel aantrekkelijk. Slechts een klein probleem met het navigatiemenu, maar dat is geen dealbreaker.
-            </p>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 }
 

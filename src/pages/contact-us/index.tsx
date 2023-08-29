@@ -1,4 +1,6 @@
 import Faqs from '@/components/faq'
+import { fadeUp } from '@/const/anim'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -7,21 +9,36 @@ import { BiSolidPhoneCall, BiSolidEnvelope, BiSolidMap, BiLogoTwitter, BiLogoIns
 function Contact_Us() {
     return (
         <main>
-            <section className='py-20'>
+            <motion.section
+                initial={"offscreen"}
+                whileInView={"onscreen"}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ staggerChildren: 0.1 }}
+                className='py-20'>
                 <div className='container mx-auto px-4'>
                     <div className='max-w-[795px] mx-auto'>
-                        <h1 className="text-center text-sky-900 md:text-[39px] text-[32px] font-semibold leading-[45px] mb-10">
+                        <motion.h1
+                            variants={fadeUp}
+                            className="text-center text-sky-900 md:text-[39px] text-[32px] font-semibold leading-[45px] mb-10">
                             Neem Contact Op
-                        </h1>
-                        <p className="opacity-80 text-center text-black text-[22px] font-normal leading-[39px] tracking-wide">
+                        </motion.h1>
+                        <motion.p variants={fadeUp}
+                            className="opacity-80 text-center text-black text-[22px] font-normal leading-[39px] tracking-wide">
                             Gebruik dit formulier om contact op te nemen met ons Klantensucces Team voor eventuele vragen, problemen of suggesties die je hebt. Als alternatief kun je ook onze FAQ-sectie raadplegen voor snelle oplossingen voor veelgestelde vragen.
-                        </p>
+                        </motion.p>
                     </div>
                 </div>
-            </section>
-            <section className='py-20' id="contact_form">
+            </motion.section>
+            <motion.section
+                initial={"offscreen"}
+                whileInView={"onscreen"}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ staggerChildren: 0.1 }}
+                className='py-20' id="contact_form">
                 <div className='container mx-auto px-4'>
-                    <div className="md:bg-white bg-sky-100 rounded-[11.14px] drop-shadow-[0_0px_30px_rgba(0,0,0,0.1)] flex md:flex-row flex-col gap-7 md:p-2 py-14">
+                    <motion.div
+                        variants={fadeUp}
+                        className="md:bg-white bg-sky-100 rounded-[11.14px] drop-shadow-[0_0px_30px_rgba(0,0,0,0.1)] flex md:flex-row flex-col gap-7 md:p-2 py-14">
                         <div className='bg-sky-100 md:w-1/3 w-full rounded-tr-[11.14px] rounded-tl-[11.14px] rounded-bl-[11.14px] md:p-10 px-4 flex flex-col justify-between gap-7 relative'>
                             <div>
                                 <h3 className="text-sky-900 text-[31.18px] font-semibold">
@@ -114,7 +131,8 @@ function Contact_Us() {
                                         className="h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 bg-neutral-200 checked:bg-black relative after:content-['\2713'] after:absolute after:hidden checked:after:block after:text-white after:left-auto after:text-xs"
                                         type="radio"
                                         name="opt1"
-                                        id="opt1" />
+                                        id="opt1"
+                                        checked />
                                     <label htmlFor='opt1' className="text-black text-sm font-medium leading-snug">Algemene Vraag</label>
                                     <input
                                         className="h-5 w-5 appearance-none rounded-full border-2 border-solid border-neutral-300 bg-neutral-200 checked:bg-black relative after:content-['\2713'] after:absolute after:hidden checked:after:block after:text-white after:left-auto after:text-xs"
@@ -139,15 +157,22 @@ function Contact_Us() {
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
-            </section>
-            <section className='py-20'>
+            </motion.section>
+            <motion.section
+                initial={"offscreen"}
+                whileInView={"onscreen"}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ staggerChildren: 0.1 }}
+                className='py-20'>
                 <div className='container mx-auto px-4'>
                     <div className='max-w-[795px] mx-auto'>
-                        <h2 className="text-center text-sky-900 text-[39px] font-semibold leading-[45px] mb-14">
+                        <motion.h2
+                            variants={fadeUp}
+                            className="text-center text-sky-900 text-[39px] font-semibold leading-[45px] mb-14">
                             Frequently Asked Questions
-                        </h2>
+                        </motion.h2>
                     </div>
                     <div className='rounded-[20px] bg-sky-100 md:p-28 py-20 px-4'>
                         <div className="bg-white rounded-[18px] shadow md:py-24 py-12 px-4">
@@ -155,7 +180,7 @@ function Contact_Us() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </motion.section>
         </main>
     )
 }
