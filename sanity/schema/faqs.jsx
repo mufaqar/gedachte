@@ -6,7 +6,7 @@ export default {
        {
          title: "Question",
          name: "title",
-         type: "text"
+         type: "string"
        },
        {
          title: "Answer",
