@@ -9,6 +9,11 @@ export default {
          type: "string"
        },
        {
+        title: "Feature Image",
+        name: "featureImage",
+        type: "number"
+      },
+       {
          title: "Date",
          name: "date",
          type: "date"
