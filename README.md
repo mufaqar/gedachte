@@ -12,3 +12,5 @@ https://gedachte.vercel.app/blogs/single-blog
 
 Status
 #update
+
+https://gedachte.vercel.app/studio
