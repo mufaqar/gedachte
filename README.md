@@ -14,3 +14,5 @@ Status
 #update
 
 https://gedachte.vercel.app/studio
+
+#Sanity
