@@ -1,9 +1,10 @@
 export const Services_Data = [
     {
-        id: 1,
-        title: "Individuele Therapie",
+        id: "1",
+        title: "Individuele",
         excrpt: "Gepersonaliseerde begeleiding om de echte uitdagingen die je tegenhouden te ontdekken en te overwinnen.",
         img: "/images/service/individual.png",
+        feature: "/images/service/1.png",
         desc: [
             {
                 para: "Individuele therapie is een persoonlijke reis naar zelfontdekking, heling en persoonlijke groei.",
@@ -14,10 +15,11 @@ export const Services_Data = [
         ],
     },
     {
-        id: 2,
-        title: "Groepstherapie",
+        id: "2",
+        title: "Groeps",
         excrpt: "Ondersteunende groepssessies onder leiding van ervaren therapeuten, gericht op verbinding en groei.",
         img: "/images/service/groeps.png",
+        feature: "/images/service/2.png",
         desc: [
             {
                 para: "Groepstherapie biedt een unieke kans om contact te maken met anderen die met vergelijkbare uitdagingen te maken hebben.",
@@ -31,10 +33,11 @@ export const Services_Data = [
         ],
     },
     {
-        id: 3,
-        title: "Relatietherapie",
+        id: "3",
+        title: "Relatie",
         excrpt: "Versterk je relatie door open communicatie en wederzijds begrip.",
         img: "/images/service/relatie.png",
+        feature: "/images/service/3.png",
         desc: [
             {
                 para: "Relatietherapie is ontworpen om relaties te versterken, communicatie te verbeteren en uitdagingen als team aan te gaan.",

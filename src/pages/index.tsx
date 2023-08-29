@@ -8,6 +8,7 @@ import Testimonials from '@/components/testimonials'
 import Comunity from '@/components/comunity'
 import Blog_Sec from '@/components/blog-sec'
 import WorkTogather from '@/components/work-togather'
+import { Services_Data } from '@/const/services-data'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,25 +18,18 @@ export default function Home() {
       <Banner />
       <section className='md:py-20 py-10'>
         <div className='container mx-auto px-4 grid md:grid-cols-4 grid-cols-1 gap-5'>
-          <Featured_Service
-            img="/images/service/1.png"
-            title="Individuele"
-            link="#"
-          />
-          <Featured_Service
-            img="/images/service/2.png"
-            title="Groep"
-            link="#"
-          />
-          <Featured_Service
-            img="/images/service/3.png"
-            title="Relatie"
-            link="#"
-          />
+          {Services_Data.map((item: any, idx: number) => {
+            return <Featured_Service
+              key={idx}
+              img={item.feature}
+              title={item.title}
+              link={`/services#${item.id}`}
+            />
+          })}
           <Featured_Service
             img="/images/service/4.png"
             title="Speciale"
-            link="#"
+            link="/services#special_workshop"
           />
         </div>
       </section>

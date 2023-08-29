@@ -15,21 +15,19 @@ export default function Services() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ staggerChildren: 0.1 }}
                 className='py-20'>
-                <motion.div
-                    variants={fadeUp}
-                    className='container mx-auto px-4'>
+                <div className='container mx-auto px-4'>
                     <div>
-                        <h1 className="max-w-[522px] mx-auto text-center text-sky-900 md:text-[39px] text-[32px] font-semibold leading-[52px] mb-10">
+                        <motion.h1 variants={fadeUp} className="max-w-[522px] mx-auto text-center text-sky-900 md:text-[39px] text-[32px] font-semibold leading-[52px] mb-10">
                             Uitgebreide Geestelijke Gezondheidsdiensten
-                        </h1>
-                        <p className="max-w-[625px] mx-auto opacity-80 text-center text-black text-[22px] font-normal leading-[39px] tracking-wide">
+                        </motion.h1>
+                        <motion.p variants={fadeUp} className="max-w-[625px] mx-auto opacity-80 text-center text-black text-[22px] font-normal leading-[39px] tracking-wide">
                             Wij bieden een breed scala aan diensten om diverse mentale gezondheidsproblemen aan te pakken.
-                        </p>
+                        </motion.p>
                     </div>
-                </motion.div>
+                </div>
             </motion.section>
             {Services_Data.map((item: any, idx: number) => {
-                return <section key={idx} className='py-20'>
+                return <section key={idx} className='py-20' id={item.id}>
                     <div className='container mx-auto bg-sky-100 rounded-[20px] md:px-16 md:pt-[74px] md:pb-9 px-6 py-7'>
                         <ServiceBox data={item} />
                     </div>
@@ -95,7 +93,8 @@ export default function Services() {
                 whileInView={"onscreen"}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ staggerChildren: 0.1 }}
-                className='py-20 md:px-0 px-4'>
+                className='py-20 md:px-0 px-4'
+                id='special_workshop'>
                 <div className='container mx-auto bg-sky-100 rounded-[20px] md:p-10 md:pb-20 pt-16 pb-16 px-3'>
                     <div>
                         <motion.h2

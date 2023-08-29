@@ -23,7 +23,7 @@ function Featured_Post({img} : any) {
                 </Link>
             </div>
             <div className='post_content'>
-                <Link href="#" className="post-title w-[632px] text-sky-900 text-xl font-bold">
+                <Link href="/blogs/single" className="post-title w-[632px] text-sky-900 text-xl font-bold">
                     Stress Begrijpen en Beheersen in het Dagelijks Leven
                 </Link>
                 <p className="post_excrpt text-neutral-500 text-[15px] font-normal leading-[30px] mt-2.5">

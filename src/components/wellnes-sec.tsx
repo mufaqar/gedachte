@@ -29,7 +29,7 @@ function Wellnes_Sec() {
                         <li>
                             <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[40px] flex items-center gap-8'>
                                 <BsCheckCircle className="w-9 h-9" />
-                                <Link href="#">
+                                <Link href="/services">
                                     Ontdek Onze diensten
                                 </Link>
                             </h3>
@@ -40,7 +40,7 @@ function Wellnes_Sec() {
                         <li>
                             <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[40px] flex items-center gap-8'>
                                 <BsCheckCircle className="w-9 h-9" />
-                                <Link href="#">
+                                <Link href="/contact-us#contact_form">
                                     Boek een afspraak
                                 </Link>
                             </h3>
@@ -51,7 +51,7 @@ function Wellnes_Sec() {
                         <li>
                             <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[40px] flex items-center gap-8'>
                                 <BsCheckCircle className="w-9 h-9" />
-                                <Link href="#">
+                                <Link href="/blogs#events">
                                     Speciale Events
                                 </Link>
                             </h3>
@@ -62,7 +62,7 @@ function Wellnes_Sec() {
                         <li>
                             <h3 className='text-blue-800 text-[22px] font-medium capitalize leading-[40px] flex items-center gap-8'>
                                 <BsCheckCircle className="w-9 h-9" />
-                                <Link href="#">
+                                <Link href="/about-us">
                                     Blijvende steun
                                 </Link>
                             </h3>

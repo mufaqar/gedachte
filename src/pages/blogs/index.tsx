@@ -29,7 +29,7 @@ function Blogs() {
                     </div>
                 </div>
             </motion.section>
-            <section className='py-20'>
+            <section className='py-20' id='events'>
                 <div className='container mx-auto px-4 grid md:grid-cols-3 grid-cols-1 gap-7'>
                     {Events_Data.map((item: any, idx: number) => {
                         return <EventBox key={idx} data={item} />

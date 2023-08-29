@@ -55,7 +55,7 @@ function Blog_Sec() {
                             </div>
                         </div>
                         <div className='post_content'>
-                            <Link href="#" className="post_title w-[632px] text-sky-900 text-xl font-bold">
+                            <Link href="/blogs/single" className="post_title w-[632px] text-sky-900 text-xl font-bold">
                                 Stress Begrijpen en Beheersen in het Dagelijks Leven
                             </Link>
                             <p className="post_excrpt opacity-80 text-black text-base font-normal leading-[33.92px] tracking-tight mt-2.5">

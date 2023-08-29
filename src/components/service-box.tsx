@@ -11,14 +11,14 @@ function ServiceBox({ data }: any) {
       whileInView={"onscreen"}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ staggerChildren: 0.1 }}
-      className={`flex flex-col gap-8 items-center ${data.id === 2 ? "md:flex-row-reverse" : "md:flex-row"}`}>
+      className={`flex flex-col gap-8 items-center ${data.id === '2' ? "md:flex-row-reverse" : "md:flex-row"}`}>
       <motion.div
         variants={fadeUp}
         className='md:w-1/2 w-full'>
         <div className="md:p-[32.27px] px-2 py-[32.27px] max-w-[490px] mx-auto bg-white rounded-2xl flex-col justify-center items-start gap-[42.41px] flex w-full">
           <div className="flex-col justify-start md:items-start items-center gap-[25.81px] flex w-full">
             <h2 className="service_title text-sky-900 text-2xl font-bold md:text-left text-center leading-[47.94px]">
-              {data?.title}
+              {data?.title} Therapie
             </h2>
             <p className="service_excrpt text-sky-900 text-base font-normal md:text-left text-center leading-9 tracking-tight">
               {data?.excrpt}
