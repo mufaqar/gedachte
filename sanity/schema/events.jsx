@@ -11,7 +11,7 @@ export default {
        {
         title: "Feature Image",
         name: "featureImage",
-        type: "number"
+        type: "image"
       },
        {
          title: "Date",
