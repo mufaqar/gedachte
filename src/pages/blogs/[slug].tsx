@@ -114,16 +114,9 @@ function Single_Blog() {
                     </p>
                 </motion.div>
             </motion.section>
-            <motion.section
-                initial={"offscreen"}
-                whileInView={"onscreen"}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ staggerChildren: 0.1 }}
-                className='md:py-20 py-10'>
+            <section className='md:py-20 py-10'>
                 <div className='container mx-auto px-4 grid gap-8'>
-                    <motion.div
-                        variants={fadeUp}
-                        className='flex md:flex-row flex-col md:gap-12 gap-7'>
+                    <div className='flex md:flex-row flex-col md:gap-12 gap-7'>
                         <div className='md:w-1/3 w-full'>
                             <Image src="/images/blog/post2.png" alt='images/blog/post2.png' width={445} height={448} />
                         </div>
@@ -144,10 +137,8 @@ function Single_Blog() {
                                 Beweging zorgt voor de afgifte van endorfines, de natuurlijke stemmingverbeteraars van het lichaam. Regelmatige lichamelijke activiteit kan stress verminderen en het algehele welzijn verbeteren.
                             </p>
                         </div>
-                    </motion.div>
-                    <motion.div
-                        variants={fadeUp}
-                        className='flex md:flex-row flex-col md:gap-12 gap-7'>
+                    </div>
+                    <div className='flex md:flex-row flex-col md:gap-12 gap-7'>
                         <div className='md:w-1/3 w-full'>
                             <Image src="/images/blog/post3.png" alt='images/blog/post3.png' width={445} height={448} />
                         </div>
@@ -165,10 +156,8 @@ function Single_Blog() {
                                 Organiseer taken en prioriteer verantwoordelijkheden. Effectief tijdmanagement kan voorkomen dat je je overweldigd voelt en een gevoel van controle creëren.
                             </p>
                         </div>
-                    </motion.div>
-                    <motion.div
-                        variants={fadeUp}
-                        className='flex md:flex-row flex-col md:gap-12 gap-7'>
+                    </div>
+                    <div className='flex md:flex-row flex-col md:gap-12 gap-7'>
                         <div className='md:w-1/3 w-full'>
                             <Image src="/images/blog/post4.png" alt='images/blog/post4.png' width={445} height={448} />
                         </div>
@@ -192,9 +181,9 @@ function Single_Blog() {
                                 Doe aan mindfulnessmeditatie, yoga of tai chi. Deze praktijken bevorderen het bewustzijn van het huidige moment en kunnen stress op termijn verminderen.
                             </p>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
-            </motion.section>
+            </section>
             <motion.section
                 initial={"offscreen"}
                 whileInView={"onscreen"}
