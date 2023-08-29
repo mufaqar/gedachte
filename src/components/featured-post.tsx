@@ -2,11 +2,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-function Featured_Post() {
+function Featured_Post({img} : any) {
     return (
         <div>
             <div className='featured_img'>
-                <Image src="/images/blog/1.png" alt='blog/1.png' width={645} height={437} />
+                <Image src={img} alt={img} width={645} height={437} />
             </div>
             <div className='post_meta flex justify-between items-center my-8'>
                 <div className='flex gap-3 items-center'>

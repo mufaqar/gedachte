@@ -27,7 +27,7 @@ function Blog_Sec() {
                         </span>
                     </h2>
                 </motion.div>
-                <div className='grid md:grid-cols-2 grid-cols-1 md:gap-20 gap-7 items-center'>
+                <div className='grid md:grid-cols-2 grid-cols-1 md:gap-20 gap-7'>
                     <motion.div
                         variants={fadeUp}>
                         <div className='featured_img'>
@@ -67,8 +67,8 @@ function Blog_Sec() {
                         <motion.div
                             variants={fadeUp}
                             className='flex md:flex-row flex-col gap-10'>
-                            <Featured_Post />
-                            <Featured_Post />
+                            <Featured_Post img="/images/blog/2.png" />
+                            <Featured_Post img="/images/blog/3.png" />
                         </motion.div>
                         <motion.div
                             variants={fadeUp}
