@@ -1,11 +1,20 @@
+import { fadeUp } from '@/const/anim'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 function ServiceBox({ data }: any) {
   return (
-    <div className={`flex flex-col gap-8 items-center ${data.id === 2 ? "md:flex-row-reverse" : "md:flex-row"}`}>
-      <div className='md:w-1/2 w-full'>
+    <motion.div
+      initial={"offscreen"}
+      whileInView={"onscreen"}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ staggerChildren: 0.1 }}
+      className={`flex flex-col gap-8 items-center ${data.id === 2 ? "md:flex-row-reverse" : "md:flex-row"}`}>
+      <motion.div
+        variants={fadeUp}
+        className='md:w-1/2 w-full'>
         <div className="md:p-[32.27px] px-2 py-[32.27px] max-w-[490px] mx-auto bg-white rounded-2xl flex-col justify-center items-start gap-[42.41px] flex w-full">
           <div className="flex-col justify-start md:items-start items-center gap-[25.81px] flex w-full">
             <h2 className="service_title text-sky-900 text-2xl font-bold md:text-left text-center leading-[47.94px]">
@@ -24,8 +33,10 @@ function ServiceBox({ data }: any) {
             <Image src={data?.img} alt={data?.img} width={482} height={307} />
           </div>
         </div>
-      </div>
-      <div className='service_desc md:w-1/2 w-full'>
+      </motion.div>
+      <motion.div
+        variants={fadeUp}
+        className='service_desc md:w-1/2 w-full'>
         <div className='max-w-[522px] grid gap-10'>
           {data?.desc?.map((item: any, _idx: any) => {
             return <p key={_idx} className="opacity-80 text-black md:text-[19px] text-base font-medium md:text-left text-center leading-[39px] tracking-wide">
@@ -33,8 +44,8 @@ function ServiceBox({ data }: any) {
             </p>
           })}
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 

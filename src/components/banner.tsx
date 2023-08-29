@@ -10,7 +10,8 @@ function Banner() {
             initial={"offscreen"}
             whileInView={"onscreen"}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ staggerChildren: 0.1 }} className='py-20 bg-[url("/images/mainbg.png")] bg-center bg-no-repeat bg-cover min-h-screen flex items-center'>
+            transition={{ staggerChildren: 0.1 }} 
+            className='py-20 bg-[url("/images/mainbg.png")] bg-center bg-no-repeat bg-cover min-h-screen flex items-center'>
             <div className='container mx-auto px-4'>
                 <div className='max-w-[620px] mx-auto'>
                     <motion.h1
