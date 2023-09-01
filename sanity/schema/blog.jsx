@@ -13,7 +13,7 @@ export default {
         name: 'slug',
         type: 'slug',
         options: {
-          source: 'question',
+          source: 'name',
           maxLength: 200, // will be ignored if slugify is set
           slugify: input => input
                                .toLowerCase()

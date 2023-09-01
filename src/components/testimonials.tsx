@@ -5,7 +5,7 @@ import React from 'react'
 import { BsFillStarFill } from 'react-icons/bs'
 import Slider from "react-slick";
 
-function Testimonials() {
+function Testimonials({ testimonial }: any) {
     const settings = {
         dots: false,
         arrows: false,
@@ -44,6 +44,13 @@ function Testimonials() {
             }
         ]
     };
+    function generateArray(upToNumber:any) {
+        let result = [];
+        for (let i = 1; i <= upToNumber; i++) {
+          result.push(i);
+        }
+        return result;
+      }
     return (
         <motion.section
             initial={"offscreen"}
@@ -76,7 +83,8 @@ function Testimonials() {
                         </div>
                         <div className='md:w-[70%] w-full'>
                             <Slider {...settings}>
-                                {[0, 1, 2, 3].map((item: any, idx: number) => {
+                                {testimonial.map((item: any, idx: number) => {
+                                    let star = generateArray(5);
                                     return <motion.div
                                         variants={fadeUp}
                                         key={idx} className='px-3 rounded-[20px]'>
@@ -86,7 +94,7 @@ function Testimonials() {
                                                     “
                                                 </span>
                                                 <br />
-                                                Gedachte Gids heeft mijn leven veranderd. Dankzij hun deskundige begeleiding voel ik me nu veel gelukkiger en zelfverzekerder. Een absolute aanrader!
+                                                {item?.review}
                                                 <br />
                                                 <span className="text-black text-3xl font-bold leading-[46.65px] tracking-wide text-right block">
                                                     “
@@ -95,28 +103,22 @@ function Testimonials() {
                                             <div className='w-full flex justify-between items-center gap-5'>
                                                 <div>
                                                     <h4 className="text-black md:text-lg text-sm font-extrabold">
-                                                        Sandra de Vries
+                                                        {item?.name}
                                                     </h4>
                                                     <p className="text-neutral-600 md:text-xs text-[10px] font-normal">
-                                                        Regional Markets Executive
+                                                        {item.designation}
                                                     </p>
                                                 </div>
                                                 <ul className='flex gap-1'>
-                                                    <li>
-                                                        <BsFillStarFill className="text-sky-900 md:h-8 md:w-8 h-4 w-4 md:p-1 p-0" />
-                                                    </li>
-                                                    <li>
-                                                        <BsFillStarFill className="text-sky-900 md:h-8 md:w-8 h-4 w-4 md:p-1 p-0" />
-                                                    </li>
-                                                    <li>
-                                                        <BsFillStarFill className="text-sky-900 md:h-8 md:w-8 h-4 w-4 md:p-1 p-0" />
-                                                    </li>
-                                                    <li>
-                                                        <BsFillStarFill className="text-sky-900 md:h-8 md:w-8 h-4 w-4 md:p-1 p-0" />
-                                                    </li>
-                                                    <li>
-                                                        <BsFillStarFill className="text-sky-900 md:h-8 md:w-8 h-4 w-4 md:p-1 p-0" />
-                                                    </li>
+                                                    {
+
+                                                        star?.map((s: any, i: number) => (
+                                                            <li key={i}>
+                                                                <BsFillStarFill className="text-sky-900 md:h-8 md:w-8 h-4 w-4 md:p-1 p-0" />
+                                                            </li>
+                                                        ))
+                                                    }
+
                                                 </ul>
                                             </div>
                                         </div>

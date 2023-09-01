@@ -9,8 +9,11 @@ import { Posts_Data } from '@/const/posts-data'
 import PostBox from '@/components/post-box'
 import { motion } from 'framer-motion'
 import { fadeUp } from '@/const/anim'
+import { client } from '../../../sanity/lib/client'
+import { QBlogs, QSingleBlogs } from '../../../sanity/lib/queries'
 
-function Single_Blog() {
+function Single_Blog({blog, blogs}:any) {
+    console.log("🚀 ~ file: [slug].tsx:16 ~ Single_Blog ~ blog:", blog)
     return (
         <main>
             <motion.section
@@ -23,12 +26,12 @@ function Single_Blog() {
                     <motion.h1
                         variants={fadeUp}
                         className="text-white text-[39px] md:text-left text-center font-semibold leading-[45px] mb-4">
-                        Stress Begrijpen en Beheersen in het Dagelijks Leven
+                        {blog?.name}
                     </motion.h1>
                     <motion.p
                         variants={fadeUp}
                         className="md:w-[520px] w-[300px] md:mx-0 mx-auto text-white md:text-lg text-base md:text-left text-center font-normal leading-[26.94px] mb-12">
-                        Verken het concept van stress, de meest voorkomende triggers en praktische strategieën om dagelijkse stress te beheersen.
+                            {blog?.excerpt}
                     </motion.p>
                     <div className='post_meta flex flex-wrap gap-2.5 md:justify-start justify-center items-center'>
                         <motion.span
@@ -88,7 +91,7 @@ function Single_Blog() {
                         </p>
                     </div>
                     <div className='md:w-1/3 w-full'>
-                        <Image src="/images/blog/post1.png" alt='images/blog/post1.png' width={478} height={268} />
+                        <Image src={blog?.featureImage.asset?.url} alt='images/blog/post1.png' width={478} height={268} />
                     </div>
                 </motion.div>
                 <motion.div
@@ -221,7 +224,7 @@ function Single_Blog() {
                     </h2>
                 </div>
                 <div className='container mx-auto px-4 grid md:grid-cols-3 grid-cols-1 gap-7 md:mt-20 mt-10'>
-                    {Posts_Data.slice(0, 3).map((item: any, idx: number) => {
+                    {blogs.slice(0, 3).map((item: any, idx: number) => {
                         return <PostBox key={idx} data={item} />
                     })}
                 </div>
@@ -236,3 +239,12 @@ function Single_Blog() {
 }
 
 export default Single_Blog
+
+
+
+export const getServerSideProps = async (context:any) => {
+    const {slug} = context.params
+    const blog = await client.fetch(QSingleBlogs, {slug})
+    const blogs = await client.fetch(QBlogs)
+    return { props: { blog, blogs } }
+}

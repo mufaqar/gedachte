@@ -27,6 +27,16 @@ export default {
          title: "Clients",
          name: "clients",
          type: "string"
-       }
+       },
+       {
+        title: "University",
+        name: "university",
+        type: "string"
+      },
+       {
+        title: "About",
+        name: "about",
+        type: "text"
+      }
      ]
    }

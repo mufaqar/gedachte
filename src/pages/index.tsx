@@ -9,10 +9,13 @@ import Comunity from '@/components/comunity'
 import Blog_Sec from '@/components/blog-sec'
 import WorkTogather from '@/components/work-togather'
 import { Services_Data } from '@/const/services-data'
+import { client } from '../../sanity/lib/client'
+import { QTeams, QTestimonial } from '../../sanity/lib/queries'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({testimonial, teams}:any) {
+  console.log("🚀 ~ file: index.tsx:20 ~ Home ~ faqs:", teams)
   return (
     <main className={``}>
       <Banner />
@@ -34,12 +37,25 @@ export default function Home() {
         </div>
       </section>
       <Wellnes_Sec />
-      <Team_sec />
+      <Team_sec teams={teams}/>
       <Vision_Sec />
-      <Testimonials />
+      <Testimonials testimonial={testimonial}/>
       <Comunity />
       <Blog_Sec />
       <WorkTogather />
     </main >
   )
+}
+
+
+
+
+ 
+
+ 
+export const getServerSideProps = async () => {
+  const testimonial = await client.fetch(QTestimonial)
+  const teams = await client.fetch(QTeams)
+  
+  return { props: { testimonial, teams } }
 }

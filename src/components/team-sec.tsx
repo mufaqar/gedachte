@@ -4,7 +4,7 @@ import { TeamData } from '@/const/team-data'
 import { motion } from 'framer-motion'
 import { zoomIn } from '@/const/anim'
 
-function Team_sec() {
+function Team_sec({teams}:any) {
     return (
         <motion.section
             initial={"offscreen"}
@@ -19,7 +19,7 @@ function Team_sec() {
                     </h2>
                 </div>
                 <div className='grid md:grid-cols-4 grid-cols-1 gap-5'>
-                    {TeamData.slice(0, 8).map((item: any, idx: number) => {
+                    {teams?.slice(0, 8).map((item: any, idx: number) => {
                         return <TeamBox key={idx} data={item} />
                     })}
                 </div>

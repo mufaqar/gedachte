@@ -5,8 +5,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { BiSolidPhoneCall, BiSolidEnvelope, BiSolidMap, BiLogoTwitter, BiLogoInstagram, BiLogoDiscordAlt } from 'react-icons/bi'
+import { QFaqs } from '../../../sanity/lib/queries'
+import { client } from '../../../sanity/lib/client'
 
-function Contact_Us() {
+function Contact_Us({faqs}:any) {
+    console.log("🚀 ~ file: index.tsx:12 ~ Contact_Us ~ faqs:", faqs)
     return (
         <main>
             <motion.section
@@ -176,7 +179,7 @@ function Contact_Us() {
                     </div>
                     <div className='rounded-[20px] bg-sky-100 md:p-28 py-20 px-4'>
                         <div className="bg-white rounded-[18px] shadow md:py-24 py-12 px-4">
-                            <Faqs />
+                            <Faqs faqs={faqs}/>
                         </div>
                     </div>
                 </div>
@@ -186,3 +189,10 @@ function Contact_Us() {
 }
 
 export default Contact_Us
+
+
+export const getServerSideProps = async () => {
+    const faqs = await client.fetch(QFaqs)
+    
+    return { props: { faqs } }
+  }

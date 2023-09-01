@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { AiOutlineShareAlt } from 'react-icons/ai'
+import {dateFormate} from '../utils'
 
 function PostBox({ data }: any) {
     return (
@@ -13,15 +14,15 @@ function PostBox({ data }: any) {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ staggerChildren: 0.1 }} >
             <motion.div variants={zoomIn} className="bg-white rounded-[30px] shadow pb-10">
-                <Link href="/blogs/single" className=''>
-                    <Image src={data?.img} alt={data?.img} width={645} height={437} className='w-full' />
+                <Link href={`/blogs/${data?.slug?.current}`} className=''>
+                    <Image src={data?.featureImage?.asset?.url} alt={data?.img} width={645} height={437} className='w-full h-[350px] object-cover rounded-xl' />
                 </Link>
                 <div className='md:px-[30px] px-6 mt-8 mb-6'>
-                    <Link href="/blogs/single" className="text-neutral-900 md:text-[25px] text-lg font-semibold md:leading-[45px] leading-[33.67px]">
-                        {data?.title}
+                    <Link href={`/blogs/${data?.slug?.current}`} className="text-neutral-900 md:text-[25px] text-lg font-semibold md:leading-[45px] leading-[33.67px]">
+                        {data?.name}
                     </Link>
                     <p className="text-gray-500 text-base font-normal leading-normal">
-                        {data?.content}
+                        {data?.excerpt}
                     </p>
                 </div>
                 <div className='post_meta flex flex-wrap gap-2 justify-between md:px-[30px] px-6'>
@@ -36,7 +37,7 @@ function PostBox({ data }: any) {
                         </div>
                         <span className='h-[1px] w-8 bg-black/10'></span>
                         <Link href="#" className="text-gray-500 text-sm font-normal leading-loose">
-                            Juni 28, 2023
+                            {dateFormate(data?._createdAt)}
                         </Link>
                     </div>
                     <div className=''>

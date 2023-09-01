@@ -4,8 +4,8 @@ import { Faqs_Data } from '@/const/faq-data'
 import { motion } from "framer-motion";
 import { fadeUp } from "@/const/anim";
 
-export default function Faqs() {
-    const [open, setOpen] = useState(1);
+export default function Faqs({faqs}:any) {
+    const [open, setOpen] = useState(0);
     const handleFaq = (id: any) => {
         if (open === id) {
             return setOpen(id)
@@ -15,25 +15,25 @@ export default function Faqs() {
 
     return (
         <motion.div className="max-w-[813px] mx-auto divide-y ">
-            {Faqs_Data.map((item: any, idx: number) => {
+            {faqs.map((item: any, idx: number) => {
                 return <motion.div key={idx}
                     variants={fadeUp}
                     className="w-full h-fit py-[30px]">
                     <div className="">
-                        <div className="flex md:flex-row flex-row-reverse justify-between cursor-pointer" onClick={() => handleFaq(item.id)}>
+                        <div className="flex md:flex-row flex-row-reverse justify-between cursor-pointer" onClick={() => handleFaq(idx)}>
                             <p className="text-sky-900 md:text-[22px] text-lg font-medium leading-7 w-full" >
-                                {item.question}
+                                {item.title}
                             </p>
                             <span className="text-lightBlue w-7 h-7">
                                 {
-                                    open === item.id ? (<AiOutlineMinus size={18} />) : (<AiOutlinePlus size={18} />)
+                                    open === idx ? (<AiOutlineMinus size={18} />) : (<AiOutlinePlus size={18} />)
                                 }
                             </span>
                         </div>
                     </div>
-                    <div className={`${open === item.id ? 'flex' : 'hidden'} `}>
+                    <div className={`${open === idx ? 'flex' : 'hidden'} `}>
                         <p className="text-sky-900 text-lg font-normal leading-[30px] mt-5" >
-                            {item.ans}
+                            {item.answer}
                         </p>
                     </div>
                 </motion.div>

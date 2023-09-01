@@ -6,8 +6,11 @@ import { Posts_Data } from '@/const/posts-data'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { fadeUp } from '@/const/anim'
+import { client } from '../../../sanity/lib/client'
+import { QBlogs } from '../../../sanity/lib/queries'
 
-function Blogs() {
+function Blogs({blogs}:any) {
+    console.log("🚀 ~ file: index.tsx:13 ~ Blogs ~ blogs:", blogs)
     return (
         <main>
             <motion.section
@@ -46,7 +49,7 @@ function Blogs() {
                     </p>
                 </div>
                 <div className='container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 gap-7 mt-20'>
-                    {Posts_Data.map((item: any, idx: number) => {
+                    {blogs?.map((item: any, idx: number) => {
                         return <PostBox key={idx} data={item} />
                     })}
                 </div>
@@ -61,3 +64,10 @@ function Blogs() {
 }
 
 export default Blogs
+
+
+export const getServerSideProps = async () => {
+    const blogs = await client.fetch(QBlogs)
+    
+    return { props: { blogs } }
+}

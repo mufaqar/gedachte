@@ -4,8 +4,10 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { QStaff } from '../../../sanity/lib/queries'
+import { client } from '../../../sanity/lib/client'
 
-export default function About_Us() {
+export default function About_Us({staff}:any) {
   return (
     <main>
       <motion.section
@@ -90,17 +92,19 @@ export default function About_Us() {
             </div>
           </motion.div>
           <div className='grid md:grid-cols-4 grid-cols-1 gap-5 mt-14'>
-            {TeamData.slice(8).map((item: any, idx: number) => {
-              return <motion.div key={idx} variants={fadeUp}
+            {staff?.map((item: any, idx: number) => {
+              console.log("🚀 ~ file: index.tsx:97 ~ {staff?.map ~ item:", item)
+              return(
+                <motion.div key={idx} variants={fadeUp}
                 className="grid gap-5 py-6 ">
                 <div className='rounded-full w-[200px] h-[174px] mx-auto mb-8 relative'>
-                  <Image src={item?.img} alt={item?.img} width={200} height={174} className='' />
+                  <Image src={item?.featureImage?.asset.url} alt={item?.img} width={200} height={174} className='' />
                 </div>
                 <p className="text-center text-black text-[22px] font-bold">
                   {item?.name}
                 </p>
                 <p className="text-center text-zinc-500 text-base font-medium">
-                  {item?.role}
+                  {item?.designation}
                 </p>
                 <ul className='flex gap-7 justify-center items-center'>
                   <li>
@@ -120,6 +124,8 @@ export default function About_Us() {
                   </li>
                 </ul>
               </motion.div>
+              ) 
+              
             })}
           </div>
         </div>
@@ -157,4 +163,12 @@ export default function About_Us() {
       </motion.section>
     </main>
   )
+}
+
+
+
+export const getServerSideProps = async () => {
+  const staff = await client.fetch(QStaff)
+  
+  return { props: { staff } }
 }
