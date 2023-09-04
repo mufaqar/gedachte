@@ -1,4 +1,5 @@
 import { zoomIn } from '@/const/anim'
+import { dateFormate } from '@/utils'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -13,14 +14,14 @@ function EventBox({ data }: any) {
             transition={{ staggerChildren: 0.1 }}
             className="p-[30px] shadow rounded-xl flex flex-col gap-[22px]">
             <motion.div variants={zoomIn} className=''>
-                <Image src={data?.img} alt={data?.img} width={330} height={425} className='w-full scale-100 hover:scale-110' />
+                <Image src={data?.featureImage?.asset?.url} alt={data?.img} width={330} height={425} className='w-full scale-100 hover:scale-110' />
             </motion.div>
             <div>
                 <p className="text-black text-xs font-normal leading-[14.57px] mb-5">
-                    {data?.date}
+                    {dateFormate(data?.date)}
                 </p>
                 <h4 className="text-black text-[17px] font-bold leading-none">
-                    {data?.title}
+                    {data?.name}
                 </h4>
             </div>
             <div className='w-full h-[1px] bg-black/20'></div>
