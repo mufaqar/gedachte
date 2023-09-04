@@ -7,10 +7,9 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { fadeUp } from '@/const/anim'
 import { client } from '../../../sanity/lib/client'
-import { QBlogs } from '../../../sanity/lib/queries'
+import { QBlogs, QEvents } from '../../../sanity/lib/queries'
 
 function Blogs({blogs}:any) {
-    console.log("🚀 ~ file: index.tsx:13 ~ Blogs ~ blogs:", blogs)
     return (
         <main>
             <motion.section
@@ -68,6 +67,7 @@ export default Blogs
 
 export const getServerSideProps = async () => {
     const blogs = await client.fetch(QBlogs)
+    const events = await client.fetch(QEvents)
     
-    return { props: { blogs } }
+    return { props: { blogs, events } }
 }

@@ -10,11 +10,11 @@ import Blog_Sec from '@/components/blog-sec'
 import WorkTogather from '@/components/work-togather'
 import { Services_Data } from '@/const/services-data'
 import { client } from '../../sanity/lib/client'
-import { QTeams, QTestimonial } from '../../sanity/lib/queries'
+import { QBlogs, QTeams, QTestimonial } from '../../sanity/lib/queries'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({testimonial, teams}:any) {
+export default function Home({testimonial, teams, blogs}:any) {
   console.log("🚀 ~ file: index.tsx:20 ~ Home ~ faqs:", teams)
   return (
     <main className={``}>
@@ -41,7 +41,7 @@ export default function Home({testimonial, teams}:any) {
       <Vision_Sec />
       <Testimonials testimonial={testimonial}/>
       <Comunity />
-      <Blog_Sec />
+      <Blog_Sec blogs={blogs}/>
       <WorkTogather />
     </main >
   )
@@ -56,6 +56,7 @@ export default function Home({testimonial, teams}:any) {
 export const getServerSideProps = async () => {
   const testimonial = await client.fetch(QTestimonial)
   const teams = await client.fetch(QTeams)
-  
-  return { props: { testimonial, teams } }
+  const blogs = await client.fetch(QBlogs)
+
+  return { props: { testimonial, teams, blogs } }
 }

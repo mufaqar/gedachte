@@ -5,8 +5,10 @@ import { AiOutlineShareAlt } from 'react-icons/ai'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { fadeUp } from '@/const/anim'
+import { dateFormate } from '@/utils'
 
-function Blog_Sec() {
+function Blog_Sec({blogs}:any) {
+    console.log("🚀 ~ file: blog-sec.tsx:10 ~ Blog_Sec ~ blogs:", blogs)
     return (
         <motion.section
             initial={"offscreen"}
@@ -30,9 +32,9 @@ function Blog_Sec() {
                 <div className='grid md:grid-cols-2 grid-cols-1 md:gap-20 gap-7'>
                     <motion.div
                         variants={fadeUp}>
-                        <div className='featured_img'>
-                            <Image src="/images/blog/1.png" alt='blog/1.png' width={645} height={437} className='w-full' />
-                        </div>
+                        <Link href={`/blogs/${blogs[0]?.slug?.current}`} className='featured_img'>
+                            <Image src={blogs[0]?.featureImage?.asset?.url} alt='blog/1.png' width={645} height={437} className='w-full' />
+                        </Link>
                         <div className='post_meta grid md:grid-cols-2 grid-cols-1 justify-between my-8'>
                             <div className='flex justify-between items-center'>
                                 <div className='flex gap-3 items-center'>
@@ -45,7 +47,7 @@ function Blog_Sec() {
                                 </div>
                                 <span className='h-[1px] w-8 bg-black/10'></span>
                                 <Link href="#" className="text-gray-500 text-sm font-normal leading-loose">
-                                    Juni 28, 2023
+                                    {dateFormate(blogs[0]?._createdAt)}
                                 </Link>
                             </div>
                             <div className='md:flex hidden justify-end'>
@@ -55,11 +57,11 @@ function Blog_Sec() {
                             </div>
                         </div>
                         <div className='post_content'>
-                            <Link href="/blogs/single" className="post_title w-[632px] text-sky-900 text-xl font-bold">
-                                Stress Begrijpen en Beheersen in het Dagelijks Leven
+                            <Link href={`/blogs/${blogs[0]?.slug?.current}`} className="post_title w-[632px] text-sky-900 text-xl font-bold">
+                                {blogs[0]?.name}
                             </Link>
                             <p className="post_excrpt opacity-80 text-black text-base font-normal leading-[33.92px] tracking-tight mt-2.5">
-                                Duik in het concept van stress, ontdek de meest voorkomende triggers en leer praktische strategieën om dagelijkse stress te beheersen. Wij bieden je concrete tips om stressverlagende technieken moeiteloos in je dagelijkse routine te integreren.
+                            {blogs[0]?.excerpt}
                             </p>
                         </div>
                     </motion.div>
@@ -67,8 +69,8 @@ function Blog_Sec() {
                         <motion.div
                             variants={fadeUp}
                             className='flex md:flex-row flex-col gap-10'>
-                            <Featured_Post img="/images/blog/2.png" />
-                            <Featured_Post img="/images/blog/3.png" />
+                            <Featured_Post data={blogs[1]} />
+                            <Featured_Post data={blogs[2]} />
                         </motion.div>
                         <motion.div
                             variants={fadeUp}

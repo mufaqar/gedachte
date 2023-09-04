@@ -37,3 +37,7 @@ export const QBlogs = `*[_type == "blog"]{
  export const QSingleBlogs = `*[_type == "blog" && slug.current == $slug][0]{
      name, slug, featureImage{asset->{url}}, excerpt, description, _createdAt
  }`
+
+ export const QEvents = `*[_type == "events"]{
+     name, slug, featureImage{asset->{url}}, date, subscribers, _createdAt,link
+ }`

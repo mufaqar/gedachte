@@ -11,9 +11,11 @@ import { motion } from 'framer-motion'
 import { fadeUp } from '@/const/anim'
 import { client } from '../../../sanity/lib/client'
 import { QBlogs, QSingleBlogs } from '../../../sanity/lib/queries'
+import BlockContent from "@sanity/block-content-to-react";
+import { projectId } from '../../../sanity/env'
 
-function Single_Blog({blog, blogs}:any) {
-    console.log("🚀 ~ file: [slug].tsx:16 ~ Single_Blog ~ blog:", blog)
+
+function Single_Blog({blog, blogs}) {
     return (
         <main>
             <motion.section
@@ -21,7 +23,8 @@ function Single_Blog({blog, blogs}:any) {
                 whileInView={"onscreen"}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ staggerChildren: 0.1 }}
-                className="bg-sky-900/60 md:py-20 py-10 bg-[url('/images/blog/6.png')] bg-center bg-no-repeat bg-cover bg-blend-multiply">
+                style = {{ backgroundImage: `url(${blog?.featureImage.asset?.url})` }} //blog?.featureImage.asset?.url
+                className="bg-sky-900/60 md:py-20 py-10 bg-center bg-no-repeat bg-cover bg-blend-multiply">
                 <div className='container mx-auto px-8'>
                     <motion.h1
                         variants={fadeUp}
@@ -82,7 +85,7 @@ function Single_Blog({blog, blogs}:any) {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ staggerChildren: 0.1 }}
                 className='md:py-20 py-10'>
-                <motion.div
+                {/* <motion.div
                     variants={fadeUp}
                     className='container mx-auto px-4 flex md:flex-row flex-col gap-7'>
                     <div className='md:w-2/3 w-full'>
@@ -93,31 +96,16 @@ function Single_Blog({blog, blogs}:any) {
                     <div className='md:w-1/3 w-full'>
                         <Image src={blog?.featureImage.asset?.url} alt='images/blog/post1.png' width={478} height={268} />
                     </div>
-                </motion.div>
-                <motion.div
-                    variants={fadeUp}
-                    className='container mx-auto px-4 my-8 grid gap-8'>
-                    <h2 className="text-sky-900 text-[28px] font-semibold leading-[45px]">
-                        Wat is Stress?
-                    </h2>
-                    <p className="text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
-                        Stress is de natuurlijke reactie van het lichaam op elke vraag of bedreiging. Wanneer we worden geconfronteerd met een uitdaging, of het nu een strakke deadline op het werk is of een persoonlijk probleem, geeft ons lichaam stresshormonen af zoals cortisol en adrenaline. Deze hormonen bereiden ons voor om snel te reageren, algemeen bekend als de 'vecht-of-vlucht'-reactie. In korte uitbarstingen kan deze reactie gunstig zijn, maar langdurige blootstelling aan stressoren kan leiden tot chronische stress en de bijbehorende gezondheidseffecten.
-                    </p>
-                    <h2 className="text-sky-900 text-[28px] font-semibold leading-[45px]">
-                        Stressoren Identificeren
-                    </h2>
-                    <p className="text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
-                        De eerste stap in het beheersen van stress is het identificeren van de bronnen, ook wel stressoren genoemd. Stressoren kunnen sterk variëren van persoon tot persoon en kunnen werkgerelateerde druk, financiële zorgen, relatieproblemen, gezondheidsproblemen en meer omvatten. Door de specifieke stressoren die ons beïnvloeden te lokaliseren, kunnen we werken aan het aanpakken of minimaliseren van hun impact op ons leven.
-                    </p>
-                    <h2 className="text-sky-900 text-[28px] font-semibold leading-[45px]">
-                        De Impact van Chronische Stress
-                    </h2>
-                    <p className="text-black md:text-lg text-base font-normal leading-[39px] tracking-wide">
-                        Chronische stress, indien niet beheerd, kan ernstige gevolgen hebben voor zowel onze fysieke als mentale gezondheid. Het is gekoppeld aan een reeks problemen zoals een verhoogd risico op hartziekten, verzwakte immuunfunctie, slaapstoornissen, angst en depressie. Het herkennen van de tekenen van chronische stress, zoals aanhoudende vermoeidheid, prikkelbaarheid en veranderingen in eetlust, is cruciaal voor het nemen van proactieve stappen in de richting van het beheer ervan."
-                    </p>
+                </motion.div> */}
+                <motion.div variants={fadeUp} className='container mx-auto px-4 my-8 grid gap-8 singleBlog'>
+                <BlockContent
+                blocks={blog?.description}
+                projectId={projectId}
+                dataset="production"
+              />    
                 </motion.div>
             </motion.section>
-            <section className='md:py-20 py-10'>
+            {/* <section className='md:py-20 py-10'>
                 <div className='container mx-auto px-4 grid gap-8'>
                     <div className='flex md:flex-row flex-col md:gap-12 gap-7'>
                         <div className='md:w-1/3 w-full'>
@@ -215,7 +203,7 @@ function Single_Blog({blog, blogs}:any) {
                         De eerste stap in het beheersen van stress is het identificeren van de bronnen, ook wel stressoren genoemd. Stressoren kunnen sterk variëren van persoon tot persoon en kunnen werkgerelateerde druk, financiële zorgen, relatieproblemen, gezondheidsproblemen en meer omvatten. Door de specifieke stressoren die ons beïnvloeden te lokaliseren, kunnen we werken aan het aanpakken of minimaliseren van hun impact op ons leven.
                     </p>
                 </motion.div>
-            </motion.section>
+            </motion.section> */}
             <Comments_Sec />
             <section className='md:py-20 py-10'>
                 <div className='container mx-auto px-4'>
@@ -224,7 +212,7 @@ function Single_Blog({blog, blogs}:any) {
                     </h2>
                 </div>
                 <div className='container mx-auto px-4 grid md:grid-cols-3 grid-cols-1 gap-7 md:mt-20 mt-10'>
-                    {blogs.slice(0, 3).map((item: any, idx: number) => {
+                    {blogs.slice(0, 3).map((item, idx) => {
                         return <PostBox key={idx} data={item} />
                     })}
                 </div>
@@ -242,9 +230,10 @@ export default Single_Blog
 
 
 
-export const getServerSideProps = async (context:any) => {
+export const getServerSideProps = async (context) => {
     const {slug} = context.params
     const blog = await client.fetch(QSingleBlogs, {slug})
     const blogs = await client.fetch(QBlogs)
+
     return { props: { blog, blogs } }
 }

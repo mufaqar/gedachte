@@ -17,6 +17,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "sanity/schema.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "sanity/schema.ts", "src/pages/blogs/[slug].jsx"],
   "exclude": ["node_modules"]
 }
